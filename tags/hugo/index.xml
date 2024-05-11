@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Hugo - Tag - Liagu</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>http://localhost:58958/tags/hugo/</link>
     <description>Hugo - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:58958/tags/hugo/" rel="self" type="application/rss+xml" /><item>
   <title>Blog新建之始</title>
-  <link>http://localhost:1313/posts/0492dcd/</link>
+  <link>http://localhost:58958/posts/0492dcd/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/0492dcd/</guid>
+  <guid>http://localhost:58958/posts/0492dcd/</guid>
   <description><![CDATA[前言在经历了wp,typecho,emblog等搭建的blog之后,总感觉花里胡哨的东西太多,即使是typecho比较简洁,但是要用服务器(主要问题),而且php还比较吃内存索性选择GitHubpages免费搭建个hugo咯,中间也踩过不少坑,下面详细说说
 hugo搭建在Windows上安装Hugo
 下面是官方文档里面的

@@ -1,24 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Liagu</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:58958/</link>
     <description>Liagu</description>
     <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 14:01:26 &#43;0800</lastBuildDate>
-      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="http://localhost:58958/index.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>zvzcsd</title>
-  <link>http://localhost:1313/posts/583bc6c/</link>
+  <link>http://localhost:58958/posts/583bc6c/</link>
   <pubDate>Sat, 11 May 2024 14:01:26 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/583bc6c/</guid>
+  <guid>http://localhost:58958/posts/583bc6c/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>(hu)2024育才杯</title>
-  <link>http://localhost:1313/posts/87568/</link>
+  <link>http://localhost:58958/posts/87568/</link>
   <pubDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/87568/</guid>
+  <guid>http://localhost:58958/posts/87568/</guid>
   <description><![CDATA[理论题:刚好考了NISP,题目类似就很爽
 CTF:四道题就做了三道
 大草原简单的sql注入
@@ -37,10 +37,10 @@ flag{thi5_iS_F1@g_321}流量分析wireshark分析,tcp追踪流
 </item>
 <item>
   <title>Blog新建之始</title>
-  <link>http://localhost:1313/posts/0492dcd/</link>
+  <link>http://localhost:58958/posts/0492dcd/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/0492dcd/</guid>
+  <guid>http://localhost:58958/posts/0492dcd/</guid>
   <description><![CDATA[前言在经历了wp,typecho,emblog等搭建的blog之后,总感觉花里胡哨的东西太多,即使是typecho比较简洁,但是要用服务器(主要问题),而且php还比较吃内存索性选择GitHubpages免费搭建个hugo咯,中间也踩过不少坑,下面详细说说
 hugo搭建在Windows上安装Hugo
 下面是官方文档里面的
