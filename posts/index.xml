@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>All Posts - Liagu</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>All Posts | Liagu</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 14:01:26 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>zvzcsd</title>
+  <link>http://localhost:1313/posts/583bc6c/</link>
+  <pubDate>Sat, 11 May 2024 14:01:26 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/583bc6c/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Blog新建之始</title>
+  <link>http://localhost:1313/posts/0492dcd/</link>
+  <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/0492dcd/</guid>
+  <description><![CDATA[前言在经历了wp,typecho,emblog等搭建的blog之后,总感觉花里胡哨的东西太多,即使是typecho比较简洁,但是要用服务器(主要问题),而且php还比较吃内存索性选择GitHubpages免费搭建个hugo咯,中间也踩过不少坑,下面详细说说
+hugo搭建在Windows上安装Hugo
+下面是官方文档里面的
+版本Hugo有两个版本：标准版和扩展版。使用扩展版，您可以：
+在处理图像时，将图像编码为WebP格式。无论您使用哪个版本，都可以解码WebP图像。 使用内置的LibSass转译器，将Sass转译为CSS。使用Dart Sass转译器时不需要扩展版。 我们建议您安装扩展版。
+所以我们选择安装扩展版
+安装前先安装go和gitGit（安装指南） Go（安装指南） 之后是包管理器 (任意一个)ChocolateyChocolatey是Windows上的一个免费且开源的包管理器。这将安装Hugo的扩展版：
+choco install hugo-extendedScoopScoop 是Windows上的一个免费且开源的包管理器。这将安装Hugo的扩展版：
+scoop install hugo-extendedWingetWinget 是Microsoft的官方免费且开源的Windows包管理器。这将安装Hugo的扩展版：
+winget install Hugo.Hugo.Extended但是会提示**&lsquo;choco&rsquo; 不是内部或外部命令，也不是可运行的程序** **或批处理文件。**这样就在官网安装任意一个Chocolatey 软件文档 |设置/安装这里用choco(建议powershell安装) cmd安装choco的命令
+@&#34;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&#34; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &#34;[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))&#34; &amp;&amp; SET &#34;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&#34;powershel安装choco的命令
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))然后hugo安装完成了
+hugo --version即可看版本
+hugo新建文章创建 Hugo 网站通过上述命令安装 hugo 程序后，就可以通过 hugo new site 命令进行网站创建、配置与本地调试了。]]></description>
+</item>
+</channel>
+</rss>
