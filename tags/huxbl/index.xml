@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Huxbl - Tag - Liagu</title>
+    <link>http://localhost:1313/tags/huxbl/</link>
+    <description>Huxbl - Tag | Liagu</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 21:22:16 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/huxbl/" rel="self" type="application/rss+xml" /><item>
+  <title>Huxblog搭建</title>
+  <link>http://localhost:1313/posts/e89ab75/</link>
+  <pubDate>Sat, 11 May 2024 21:22:16 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/e89ab75/</guid>
+  <description><![CDATA[1.首先先https://github.com/Huxpro/huxpro.github.io网址上fork这个项目,项目名称liaguone.github.io
+2.修改项目为pages,再配置一下等个几秒就好了
+3.最后根据自己的项目在_post修改自己的文章
+layout: post title: &ldquo;作为一个前端，看不懂@黄玄 的几乎每一个回答，只有我自己吗？&rdquo; subtitle: &ldquo;Taking this chance to reflect on myself&rdquo; author: &ldquo;Hux&rdquo; header-style: text tags:
+知乎 Meta ]]></description>
+</item>
+</channel>
+</rss>

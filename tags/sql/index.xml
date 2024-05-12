@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Sql - Tag - Liagu</title>
+    <link>http://localhost:1313/tags/sql/</link>
+    <description>Sql - Tag | Liagu</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 21:17:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/sql/" rel="self" type="application/rss+xml" /><item>
+  <title>MYSQL语法</title>
+  <link>http://localhost:1313/posts/50a4c39/</link>
+  <pubDate>Sat, 11 May 2024 21:17:31 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/50a4c39/</guid>
+  <description><![CDATA[MYSQL语法]]></description>
+</item>
+</channel>
+</rss>
