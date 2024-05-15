@@ -1,38 +1,38 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Tags - Tag - Liagu</title>
-    <link>http://localhost:60289/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Tags - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 11 May 2024 21:22:16 &#43;0800</lastBuildDate><atom:link href="http://localhost:60289/tags/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 15 May 2024 21:52:02 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+  <title>CTF</title>
+  <link>http://localhost:1313/tags/ctf/</link>
+  <pubDate>Wed, 15 May 2024 21:52:02 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/tags/ctf/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
   <title>Huxblog</title>
-  <link>http://localhost:60289/tags/huxblog/</link>
+  <link>http://localhost:1313/tags/huxblog/</link>
   <pubDate>Sat, 11 May 2024 21:22:16 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:60289/tags/huxblog/</guid>
+  <guid>http://localhost:1313/tags/huxblog/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Sql</title>
-  <link>http://localhost:60289/tags/sql/</link>
+  <link>http://localhost:1313/tags/sql/</link>
   <pubDate>Sat, 11 May 2024 21:17:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:60289/tags/sql/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>CTF</title>
-  <link>http://localhost:60289/tags/ctf/</link>
-  <pubDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:60289/tags/ctf/</guid>
+  <guid>http://localhost:1313/tags/sql/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Hugo</title>
-  <link>http://localhost:60289/tags/hugo/</link>
+  <link>http://localhost:1313/tags/hugo/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:60289/tags/hugo/</guid>
+  <guid>http://localhost:1313/tags/hugo/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>
