@@ -1,74 +1,74 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Liagu</title>
-    <link>http://localhost:58184/</link>
+    <link>http://localhost:1313/</link>
     <description>Liagu</description>
     <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 19:34:59 &#43;0800</lastBuildDate>
-      <atom:link href="http://localhost:58184/index.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
   <title>Hugo美化</title>
-  <link>http://localhost:58184/posts/90307b6/</link>
+  <link>http://localhost:1313/posts/90307b6/</link>
   <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/90307b6/</guid>
+  <guid>http://localhost:1313/posts/90307b6/</guid>
   <description><![CDATA[hugojs/css美化]]></description>
 </item>
 <item>
   <title>Hugo整理</title>
-  <link>http://localhost:58184/posts/ca8165e/</link>
+  <link>http://localhost:1313/posts/ca8165e/</link>
   <pubDate>Thu, 16 May 2024 18:43:27 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/ca8165e/</guid>
-  <description><![CDATA[1.以下是我使用hugo遇到的问题有绿色标标
+  <guid>http://localhost:1313/posts/ca8165e/</guid>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="%e6%8f%92%e5%85%a5%e5%9b%be%e7%89%87" alt="Hugo整理" title="Hugo整理" referrerpolicy="no-referrer"/></div>1.以下是我使用hugo遇到的问题有绿色标标
 因为前面标签有repost转载设置(问了Fixit群里的群主得到的结果,在这里还是要感谢大佬)
 2.]]></description>
 </item>
 <item>
   <title>XYCTF复盘</title>
-  <link>http://localhost:58184/posts/51ecbd6/</link>
+  <link>http://localhost:1313/posts/51ecbd6/</link>
   <pubDate>Wed, 15 May 2024 21:52:02 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/51ecbd6/</guid>
+  <guid>http://localhost:1313/posts/51ecbd6/</guid>
   <description><![CDATA[复盘]]></description>
 </item>
 <item>
   <title>Huxblog搭建</title>
-  <link>http://localhost:58184/posts/e89ab75/</link>
+  <link>http://localhost:1313/posts/e89ab75/</link>
   <pubDate>Sat, 11 May 2024 21:22:16 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/e89ab75/</guid>
+  <guid>http://localhost:1313/posts/e89ab75/</guid>
   <description><![CDATA[huxblog搭建]]></description>
 </item>
 <item>
   <title>MYSQL语法</title>
-  <link>http://localhost:58184/posts/50a4c39/</link>
+  <link>http://localhost:1313/posts/50a4c39/</link>
   <pubDate>Sat, 11 May 2024 21:17:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/50a4c39/</guid>
+  <guid>http://localhost:1313/posts/50a4c39/</guid>
   <description><![CDATA[MYSQL语法]]></description>
 </item>
 <item>
   <title>(hu)2024育才杯</title>
-  <link>http://localhost:58184/posts/87568/</link>
+  <link>http://localhost:1313/posts/87568/</link>
   <pubDate>Sat, 27 Apr 2024 16:38:02 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/87568/</guid>
+  <guid>http://localhost:1313/posts/87568/</guid>
   <description><![CDATA[育才杯]]></description>
 </item>
 <item>
   <title>Blog新建之始</title>
-  <link>http://localhost:58184/posts/0492dcd/</link>
+  <link>http://localhost:1313/posts/0492dcd/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/0492dcd/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/1.jpg" alt="Blog新建之始" title="Blog新建之始" referrerpolicy="no-referrer"/></div>hugo blog]]></description>
+  <guid>http://localhost:1313/posts/0492dcd/</guid>
+  <description><![CDATA[hugo blog]]></description>
 </item>
 <item>
   <title>友情链接</title>
-  <link>http://localhost:58184/posts/friends/</link>
+  <link>http://localhost:1313/posts/friends/</link>
   <pubDate>Tue, 19 Sep 2023 12:33:48 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:58184/posts/friends/</guid>
+  <guid>http://localhost:1313/posts/friends/</guid>
   <description><![CDATA[无]]></description>
 </item>
 </channel>
