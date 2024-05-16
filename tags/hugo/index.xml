@@ -1,14 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Hugo - Tag - Liagu</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>http://localhost:58184/tags/hugo/</link>
     <description>Hugo - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 18:43:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:58184/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+  <title>Hugo整理</title>
+  <link>http://localhost:58184/posts/ca8165e/</link>
+  <pubDate>Thu, 16 May 2024 18:43:27 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:58184/posts/ca8165e/</guid>
+  <description><![CDATA[1.以下是我使用hugo遇到的问题有绿色标标
+因为前面标签有repost转载设置(问了Fixit群里的群主得到的结果,在这里还是要感谢大佬)
+2.]]></description>
+</item>
+<item>
   <title>Blog新建之始</title>
-  <link>http://localhost:1313/posts/0492dcd/</link>
+  <link>http://localhost:58184/posts/0492dcd/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/0492dcd/</guid>
+  <guid>http://localhost:58184/posts/0492dcd/</guid>
   <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/1.jpg" alt="Blog新建之始" title="Blog新建之始" referrerpolicy="no-referrer"/></div>hugo blog]]></description>
 </item>
 </channel>
