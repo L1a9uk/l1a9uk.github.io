@@ -2,12 +2,15 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   ><url>
-      <loc>http://localhost:1313/categories/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/categories/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/tags/draft/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/categories/draft/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/posts/ca8165e/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/posts/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
+      <loc>http://localhost:1313/tags/</loc><lastmod>2024-05-16T18:43:27&#43;08:00</lastmod></url><url>
       <loc>http://localhost:1313/tags/ctf/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
       <loc>http://localhost:1313/categories/ctf/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
-      <loc>http://localhost:1313/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
-      <loc>http://localhost:1313/posts/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
-      <loc>http://localhost:1313/tags/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
       <loc>http://localhost:1313/posts/51ecbd6/</loc><lastmod>2024-05-15T21:52:02&#43;08:00</lastmod></url><url>
       <loc>http://localhost:1313/categories/blog/</loc><lastmod>2024-05-11T21:22:16&#43;08:00</lastmod></url><url>
       <loc>http://localhost:1313/tags/huxblog/</loc><lastmod>2024-05-11T21:22:16&#43;08:00</lastmod></url><url>
