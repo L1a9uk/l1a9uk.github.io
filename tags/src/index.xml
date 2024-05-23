@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Src - Tag - Liagu</title>
+    <link>http://localhost:1313/tags/src/</link>
+    <description>Src - Tag | Liagu</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 19:34:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/src/" rel="self" type="application/rss+xml" /><item>
+  <title>src技巧</title>
+  <link>http://localhost:1313/posts/90307b6/</link>
+  <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/90307b6/</guid>
+  <description><![CDATA[hugojs/css美化]]></description>
+</item>
+</channel>
+</rss>
