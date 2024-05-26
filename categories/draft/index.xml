@@ -3,7 +3,15 @@
     <title>Draft - Category - Liagu</title>
     <link>http://localhost:1313/categories/draft/</link>
     <description>Draft - Category | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 19:34:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/draft/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 26 May 2024 13:13:11 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/draft/" rel="self" type="application/rss+xml" /><item>
+  <title>电脑常用命令</title>
+  <link>http://localhost:1313/posts/6b2c7f9/</link>
+  <pubDate>Sun, 26 May 2024 13:13:11 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/6b2c7f9/</guid>
+  <description><![CDATA[电脑快捷键]]></description>
+</item>
+<item>
   <title>Hugo美化</title>
   <link>http://localhost:1313/posts/90307b6/</link>
   <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>

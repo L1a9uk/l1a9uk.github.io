@@ -3,7 +3,15 @@
     <title>All Posts - Liagu</title>
     <link>http://localhost:1313/posts/</link>
     <description>All Posts | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 23 May 2024 21:00:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 26 May 2024 13:13:11 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>电脑常用命令</title>
+  <link>http://localhost:1313/posts/6b2c7f9/</link>
+  <pubDate>Sun, 26 May 2024 13:13:11 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:1313/posts/6b2c7f9/</guid>
+  <description><![CDATA[电脑快捷键]]></description>
+</item>
+<item>
   <title>CE修改器 Usages</title>
   <link>http://localhost:1313/posts/b28d323/</link>
   <pubDate>Thu, 23 May 2024 21:00:46 &#43;0800</pubDate>
@@ -69,14 +77,6 @@
 </item>
 <item>
   <title>Blog新建之始</title>
-  <link>http://localhost:1313/posts/0492dcd/</link>
-  <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:1313/posts/0492dcd/</guid>
-  <description><![CDATA[hugo blog]]></description>
-</item>
-<item>
-  <title>upx-usage</title>
   <link>http://localhost:1313/posts/0492dcd/</link>
   <pubDate>Sat, 27 Apr 2024 14:34:31 &#43;0800</pubDate>
   <author>Author</author>
