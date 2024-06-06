@@ -1,17 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>Draft - Tag - Liagu</title>
-    <link>http://localhost:1313/tags/draft/</link>
-    <description>Draft - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/draft/" rel="self" type="application/rss+xml" /><item>
-  <title>Day2 我要rce</title>
-  <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</link>
-  <pubDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
+    <title>Dadada - Category - Liagu</title>
+    <link>http://localhost:1313/categories/dadada/</link>
+    <description>Dadada - Category | Liagu</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jun 2024 21:42:20 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/dadada/" rel="self" type="application/rss+xml" /><item>
   <title>Day1 Sql注⼊与数据库利⽤</title>
   <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</link>
   <pubDate>Tue, 04 Jun 2024 21:42:20 &#43;0800</pubDate>
@@ -24,14 +16,6 @@ var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select
 sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
 &lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
 string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request.]]></description>
-</item>
-<item>
-  <title>Hugo美化</title>
-  <link>http://localhost:1313/posts/90307b6/</link>
-  <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:1313/posts/90307b6/</guid>
-  <description><![CDATA[hugojs/css美化]]></description>
 </item>
 </channel>
 </rss>

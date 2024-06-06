@@ -221,6 +221,22 @@ console.log(`
 `);
 </script><main class="container"><div class="page home posts"><div class="home-profile"><div class="home-avatar"><a href="/" title="归档"><img loading="lazy" src="/assets/images/avatar.jpg" alt="/assets/images/avatar.jpg" data-title="/assets/images/avatar.jpg" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></div><h1 class="home-title"></h1><div class="links"><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
     </a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/">Day2 我要rce</a>
+  </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 22:00:29'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="content"></div><div class="post-footer">
+    <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/draft/' class="post-tag">Draft</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/">Day1 Sql注⼊与数据库利⽤</a>
+  </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 21:42:20'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="content">[toc]
+sql注⼊的起源与发展:
+SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
+var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; + ShipCity + &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
+sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
+&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
+string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request.</div><div class="post-footer">
+    <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E4%BB%A3%E5%AE%A1/' class="post-tag">代审</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/6b2c7f9/">电脑常用命令</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
       Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-26 13:13:11'>published on <time datetime="2024-05-26">2024-05-26</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/" class="post-category" title="Category - 日常分享"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 日常分享</a></span></div><div class="content">电脑快捷键</div><div class="post-footer">
@@ -241,16 +257,6 @@ console.log(`
       Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-16 19:34:59'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/src/" class="post-category" title="Category - Src"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Src</a></span></div><div class="content">hugojs/css美化</div><div class="post-footer">
     <a href="/posts/90307b6/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/src/' class="post-tag">Src</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/ca8165e/">Hugo整理</a>
-  </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-16 18:43:27'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/blog/" class="post-category" title="Category - Blog"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Blog</a></span></div><div class="content">hugo整理</div><div class="post-footer">
-    <a href="/posts/ca8165e/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/hugo/' class="post-tag">Hugo</a><a href='/tags/blog/' class="post-tag">Blog</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/51ecbd6/">XYCTF复盘</a>
-  </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-15 21:52:02'>published on <time datetime="2024-05-15">2024-05-15</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/ctf/" class="post-category" title="Category - CTF"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> CTF</a></span></div><div class="content">复盘</div><div class="post-footer">
-    <a href="/posts/51ecbd6/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/ctf/' class="post-tag">CTF</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item active">
           <span class="page-link">
             <a href="/">1</a>
@@ -258,6 +264,10 @@ console.log(`
         </li><li class="page-item">
           <span class="page-link">
             <a href="/page/2/">2</a>
+          </span>
+        </li><li class="page-item">
+          <span class="page-link">
+            <a href="/page/3/">3</a>
           </span>
         </li></ul></div></main><footer class="footer">
     <div class="footer-container"><style>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Day1 Sql注⼊与数据库利⽤ - Liagu</title><meta name="author" content="">
+<meta name="author-link" content="">
+<meta name="description" content="[toc]
+sql注⼊的起源与发展:
+SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
+var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
+sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
+&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
+string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request." /><meta name="keywords" content='代审' /><meta itemprop="name" content="Day1 Sql注⼊与数据库利⽤">
+<meta itemprop="description" content="[toc]
+sql注⼊的起源与发展:
+SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
+var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
+sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
+&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
+string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request."><meta itemprop="datePublished" content="2024-06-04T21:42:20+08:00" />
+<meta itemprop="dateModified" content="2024-06-04T21:42:20+08:00" />
+<meta itemprop="wordCount" content="317">
+<meta itemprop="keywords" content="代审," /><meta property="og:title" content="Day1 Sql注⼊与数据库利⽤" />
+<meta property="og:description" content="[toc]
+sql注⼊的起源与发展:
+SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
+var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
+sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
+&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
+string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-04T21:42:20+08:00" />
+<meta property="article:modified_time" content="2024-06-04T21:42:20+08:00" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Day1 Sql注⼊与数据库利⽤"/>
+<meta name="twitter:description" content="[toc]
+sql注⼊的起源与发展:
+SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
+var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
+sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
+&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
+string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request."/>
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/jpg" sizes="32x32" href="/assets/images/avatar.jpg">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="/assets/images/avatar.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" /><link rel="prev" href="http://localhost:1313/posts/6b2c7f9/" /><link rel="next" href="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Day1 Sql注⼊与数据库利⽤",
+    "inLanguage": "en-us",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1\/4294c34\/"
+    },"genre": "posts","keywords": "代审","wordcount":  317 ,
+    "url": "http:\/\/localhost:1313\/posts\/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1\/4294c34\/","datePublished": "2024-06-04T21:42:20+08:00","dateModified": "2024-06-04T21:42:20+08:00","publisher": {
+      "@type": "Organization",
+      "name": "","logo": "https:\/\/th.bing.com\/th\/id\/OIP.g4xSH6iLsfp1qckHDRrtzQHaHZ?w=208\u0026h=207\u0026c=7\u0026r=0\u0026o=5\u0026dpr=1.2\u0026pid=1.7"},"description": ""
+  }
+  </script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><script>(window.localStorage?.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('data-theme', 'dark');</script><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Liagu"><img loading="lazy" src="/assets/images/avatar1.jpeg" alt="Liagu" data-title="Liagu" class="logo" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/><span class="header-title-text">Liagu</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/"
+                
+                
+              ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a
+                class="menu-link"
+                href="/posts/friends/"
+                title="友情链接"
+                
+              ><i class="icon fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="Switch Theme">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Liagu"><img loading="lazy" src="/assets/images/avatar1.jpeg" alt="/assets/images/avatar1.jpeg" data-title="/assets/images/avatar1.jpeg" class="logo" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/><span class="header-title-text">Liagu</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/"
+                  
+                  
+                ><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 归档</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/"
+                  
+                  
+                >文章</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/categories/"
+                  
+                  
+                ><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/tags/"
+                  
+                  
+                ><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li
+              class="menu-item"
+            ><a
+                  class="menu-link"
+                  href="/posts/friends/"
+                  title="友情链接"
+                  
+                ><i class="icon fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="Switch Theme"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+<script type="text/javascript">
+
+const live2d_path = "https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/";
+
+
+
+function loadExternalResource(url, type) {
+	return new Promise((resolve, reject) => {
+		let tag;
+
+		if (type === "css") {
+			tag = document.createElement("link");
+			tag.rel = "stylesheet";
+			tag.href = url;
+		}
+		else if (type === "js") {
+			tag = document.createElement("script");
+			tag.src = url;
+		}
+		if (tag) {
+			tag.onload = () => resolve(url);
+			tag.onerror = () => reject(url);
+			document.head.appendChild(tag);
+		}
+	});
+}
+
+
+if (screen.width >= 100) {
+	Promise.all([
+		loadExternalResource(live2d_path + "waifu.css", "css"),
+		loadExternalResource(live2d_path + "live2d.min.js", "js"),
+		loadExternalResource(live2d_path + "waifu-tips.js", "js")
+	]).then(() => {
+		
+		initWidget({
+			waifuPath: live2d_path + "waifu-tips.json",
+			
+			
+			cdnPath: "https://live2d.fghrsh.net/api/",
+			tools: ["hitokoto", "asteroids", "switch-model", "switch-texture", "photo", "info", "quit"]
+		});
+	});
+}
+
+console.log(`
+  く__,.ヘヽ.        /  ,ー､ 〉
+           ＼ ', !-─‐-i  /  /´
+           ／｀ｰ'       L/／｀ヽ､
+         /   ／,   /|   ,   ,       ',
+       ｲ   / /-‐/  ｉ  L_ ﾊ ヽ!   i
+        ﾚ ﾍ 7ｲ｀ﾄ   ﾚ'ｧ-ﾄ､!ハ|   |
+          !,/7 '0'     ´0iソ|    |
+          |.从"    _     ,,,, / |./    |
+          ﾚ'| i＞.､,,__  _,.イ /   .i   |
+            ﾚ'| | / k_７_/ﾚ'ヽ,  ﾊ.  |
+              | |/i 〈|/   i  ,.ﾍ |  i  |
+             .|/ /  ｉ：    ﾍ!    ＼  |
+              kヽ>､ﾊ    _,.ﾍ､    /､!
+              !'〈//｀Ｔ´', ＼ ｀'7'ｰr'
+              ﾚ'ヽL__|___i,___,ンﾚ|ノ
+                  ﾄ-,/  |___./
+                  'ｰ'    !_,.:
+`);
+</script><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"><iframe allowtransparency="true" frameborder="0" width="140" height="278" scrolling="no" 
+src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=140&h=278&align=center">
+</iframe>
+</aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Day1 Sql注⼊与数据库利⽤</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="post-meta-line"><span title="published on 2024-06-04 21:42:20"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-04">2024-06-04</time></span>&nbsp;<span title="317 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 400 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#不同语言调原数据库操作模块">不同语言调⽤原⽣数据库操作模块</a></li>
+    <li><a href="#调orm的错误写法">调⽤orm的错误写法</a>
+      <ul>
+        <li><a href="#php">php：</a></li>
+        <li><a href="#javamybatis">java/MyBatis:</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>[toc]</p>
+<p><em>sql注⼊的起源与发展</em>:</p>
+<p><em>SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。</em></p>
+<pre tabindex="0"><code>var ShipCity;
+ ShipCity = Request.from(&#34;ShipCity&#34;);
+ var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; + ShipCity + 
+&#34;&#39;&#34;;</code></pre><p>从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 <!-- raw HTML omitted -->攻击简单<!-- raw HTML omitted -->、<!-- raw HTML omitted -->攻击⼿法多样<!-- raw HTML omitted -->、<!-- raw HTML omitted -->危害巨⼤<!-- raw HTML omitted -->（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。</p>
+<h1 id="sql注的基础代码样例" class="heading-element"><span>sql注⼊的基础代码样例</span>
+  <a href="#sql%e6%b3%a8%e7%9a%84%e5%9f%ba%e7%a1%80%e4%bb%a3%e7%a0%81%e6%a0%b7%e4%be%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 id="不同语言调原数据库操作模块" class="heading-element"><span>不同语言调⽤原⽣数据库操作模块</span>
+  <a href="#%e4%b8%8d%e5%90%8c%e8%af%ad%e8%a8%80%e8%b0%83%e5%8e%9f%e6%95%b0%e6%8d%ae%e5%ba%93%e6%93%8d%e4%bd%9c%e6%a8%a1%e5%9d%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>php</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span> $db <span style="color:#f92672">=</span> <span style="color:#a6e22e">init_db</span>();
+</span></span><span style="display:flex;"><span> $username <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;username&#39;</span>];  <span style="color:#75715e">//input: fuckdada&#39; and 1=1#
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#e6db74">&#34;select * from table where username = &#39;</span><span style="color:#e6db74">$username</span><span style="color:#e6db74">&#39;&#34;</span>);  
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>.net/aspx：</p>
+<pre tabindex="0"><code class="language-asp" data-lang="asp"> string connectionstring = &#34;xxx&#34;;
+ SqlConnection con = new SqlConnection(connectionstring);
+ con.Open();
+ string username = Request.QueryString[&#34;username&#34;];
+ string sql = &#34;select * from table where username = &#39;&#34; + username + &#34;&#39;&#34;;
+ SqlDataAdapter adapter = new SqlDataAdapter(sql, con);
+ DataSet dataSet = new System.Data.DataSet();
+ adapter.Fill(dataSet);
+ con.Close()</code></pre><p>java:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>conn <span style="color:#f92672">=</span> DBHerpel.<span style="color:#a6e22e">getConnection</span>();
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">if</span> (conn <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>String username <span style="color:#f92672">=</span> request.<span style="color:#a6e22e">getParameter</span>(<span style="color:#e6db74">&#34;username&#34;</span>);
+</span></span><span style="display:flex;"><span>String Sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;select * from table where username = &#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>;
+</span></span><span style="display:flex;"><span>stt <span style="color:#f92672">=</span> conn.<span style="color:#a6e22e">createStatement</span>();
+</span></span><span style="display:flex;"><span>set <span style="color:#f92672">=</span> stt.<span style="color:#a6e22e">executeQuery</span>(Sql);</span></span></code></pre></div><p>python（flask）:</p>
+<pre tabindex="0"><code> @app.route(&#34;/&#34;, methods=[&#34;GET&#34;])
+ def test():
+	username = request.args.get(&#39;username&#39;)
+ 	sql = &#34;select * from table where username = &#39;&#34; + username + &#34;&#39;&#34;conn = connect(host=&#39;localhost&#39;,port=3306,user=&#39;root&#39;,password=&#39;&#39;,database=&#39;test&#39;,charset=&#39;utf8&#39;)
+ 	cs1 = conn.cursor()
+	count = cs1.execute(sql)
+ </code></pre><p>以上全都是不同语⾔在<strong>不调⽤orm框架</strong>，直接调⽤原⽣数据库操作函数时的⽤例。（其实orm 框架的底层也是调⽤了原⽣数据库操作函数，只是orm帮开发者做了封装和对象映射的步骤） 这种显⽽易⻅有漏洞的，⼤家只需要依照我们第⼀期课堂讲的，就可以理解这个漏洞：</p>
+<ol>
+<li><strong>仅仅抓住输⼊</strong></li>
+<li><strong>当数据流⼊侵到控制流时，漏洞就产⽣了</strong></li>
+<li><strong>“数据流⼊侵控制流”产⽣的⻛险点，在于不同层⾯组件的交汇处（如：代码层与数据库层）</strong></li>
+</ol>
+<h2 id="调orm的错误写法" class="heading-element"><span>调⽤orm的错误写法</span>
+  <a href="#%e8%b0%83orm%e7%9a%84%e9%94%99%e8%af%af%e5%86%99%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="php" class="heading-element"><span>php：</span>
+  <a href="#php" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>php没有啥⽐较出名的orm框架，基本是各web框架或者cms⾃⾏去实现⾃⼰的orm（利⽤点， ⼀套闭源cms的orm可能实现得并不规范，产⽣漏洞）我们后⾯会讲的“某cms sql注⼊挖掘”， 它⾥⾯就⾃⼰写了⼀套orm，还有防注⼊，但还是被绕过了。所以相对⽐较多种多样，这⾥不 举例，后⾯在实战案例中讲。</p>
+<h3 id="javamybatis" class="heading-element"><span>java/MyBatis:</span>
+  <a href="#javamybatis" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>java的持久层技术解决⽅案可以发展历程与MyBatis的详解看这⾥ MyBatis需要有⼀个xml配置⽂件来来绑定映射关系</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>select id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;findUserByName&#34;</span> parameterType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;java.lang.String&#34;</span> 
+</span></span><span style="display:flex;"><span>resultType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn.itcast.mybatis.po.User&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;!--</span> 拼接 MySQL,引起 SQL 注<span style="color:#960050;background-color:#1e0010">⼊</span> <span style="color:#f92672">--&gt;</span>
+</span></span><span style="display:flex;"><span>        SELECT <span style="color:#f92672">*</span> FROM table WHERE username <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">&#39;</span>${value}<span style="color:#960050;background-color:#1e0010">&#39;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">&lt;/</span>select<span style="color:#f92672">&gt;</span></span></span></code></pre></div><pre tabindex="0"><code>@Test
+    public void testFindUserByName() throws Exception{
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        //创建UserMapper代理对象
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+        //调⽤userMapper的⽅法
+        List&lt;User&gt; list=userMapper.findUserByName(&#34;fuckdada&#39; and 1=1#&#34;);
+        sqlSession.close();
+        System.out.println(list);
+    }
+ }</code></pre><h4 id="为什么错误" class="heading-element"><span>为什么错误</span>
+  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%94%99%e8%af%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><p>在 MyBatis 中，<code>SELECT * FROM table WHERE username = '${value}'</code> 和 <code>SELECT * FROM table WHERE username = '#{value}'</code> 的主要区别在于它们的参数替换方式以及可能带来的 SQL 注入风险。</p>
+<h5 id="heading" class="heading-element"><span>$</span>
+  <a href="#heading" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>原理</strong>：<code>${}</code> 是 MyBatis 的字符串替换占位符，它会在 SQL 语句生成前直接替换成实际的参数值。</li>
+<li><strong>风险</strong>：因为 <code>${}</code> 是直接替换，所以如果参数 <code>value</code> 包含了恶意的 SQL 代码，就会导致 SQL 注入漏洞。例如，如果 <code>value</code> 是 <code>&quot;admin' OR '1'='1&quot;</code>，生成的 SQL 语句会变成 <code>SELECT * FROM table WHERE username = 'admin' OR '1'='1'</code>，这会导致数据库返回所有用户的数据。</li>
+<li><strong>使用场景</strong>：适用于动态表名或列名等情况下，但不建议用于用户输入的参数值</li>
+</ul>
+<h5 id="heading-1" class="heading-element"><span></span>
+  <a href="#heading-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h5><ul>
+<li><strong>原理</strong>：<code>#{}</code> 是 MyBatis 的参数占位符，它会在 SQL 语句生成时使用预编译的方式将参数值传递给数据库。( 相当于出去取字符串)</li>
+<li><strong>安全性</strong>：因为参数值是通过预编译传递的，数据库会将其作为数据处理，而不会执行其中的 SQL 代码，从而避免 SQL 注入漏洞。例如，如果 <code>value</code> 是 <code>&quot;admin' OR '1'='1&quot;</code>，生成的 SQL 语句会变成 <code>SELECT * FROM table WHERE username = ?</code>，并且参数值 <code>admin' OR '1'='1'</code> 会作为数据传递给数据库。</li>
+<li><strong>使用场景</strong>：建议始终使用 <code>#{}</code> 来传递用户输入的参数，以确保 SQL 注入安全性。</li>
+</ul>
+<p>简单讲就是MyBatis有两种变量绑定⽅式，分别是：#{}和${}</p>
+<pre tabindex="0"><code> #是绑定变量的形式，底层会⽤#{}会被替换为?号，有参数映射,会在
+DefaultParameterHandler中进⾏设置占位符的操作  --&gt;预编译
+$也是绑定变量的形式，{value}是直接被替换为了对应的值，没有参数映射，不会进⾏设置占位
+符的操作   --&gt;拼接</code></pre><p>所以这也是很多代码审计初学者或者很多课程，上来就让⼤家去找$符号的原因。⼤家后续遇 到MyBatis也确实可以这么搞，对于⼩cms简单有效。</p>
+<h1 id="总结" class="heading-element"><span>总结:</span>
+  <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>框架的使用规避漏洞风险(orm框架)</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="Updated on 2024-06-04 21:42:20">Updated on 2024-06-04&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" data-title="Day1 Sql注⼊与数据库利⽤" data-hashtags="代审"><i class="fa-brands fa-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" data-hashtag="代审"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" data-title="Day1 Sql注⼊与数据库利⽤"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E4%BB%A3%E5%AE%A1/" class="post-tag" title="Tags - 代审">代审</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/6b2c7f9/" class="post-nav-item" rel="prev" title="电脑常用命令"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>电脑常用命令</a>
+      <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/" class="post-nav-item" rel="next" title="Day2 我要rce">Day2 我要rce<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div class="post-reward">
+    <div class="comment"></div>
+    <input type="checkbox" class="reward-input" name="reward" id="fi-reward" hidden />
+    <label class="reward-button" for="fi-reward"><i class="fa-solid fa-qrcode fa-fw" aria-hidden="true"></i>Donate</label>
+    <div class="reward-ways" data-mode="static"></div>
+  </div></article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><style>
+  .footerImg {
+      height: 20px;  
+  }
+</style>
+<div class="footer-line custom">
+  <a href="https://www.travellings.cn" target="_blank"><img src="/images/travelling.png"  class="footerImg" alt="" title="开往-友链接力 v1.5"></a>
+  <a href="https://www.travellings.cn/go.html" target="_blank"><img src="/images/travelling.gif" class="footerImg" alt=""  title="开往-友链接力 v1.5"></a>
+  <a href="https://www.foreverblog.cn/" target="_blank"><img src="https://img.foreverblog.cn/logo_en_default.png" class="footerImg" alt="" > </a>
+  <a href="https://www.foreverblog.cn/go.html" target="_blank"><img src="https://img.foreverblog.cn/wormhole_2.gif" class="footerImg" alt="" title="穿梭虫洞-随机访问十年之约友链博客"></a>
+</div><div class="footer-line">
+        <span id="run-time"></span>
+      </div>
+        <div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.124.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.6"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">Theme FixIt works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.config={"code":{"copyTitle":"Copy to clipboard","editLockTitle":"Lock editable code block","editUnLockTitle":"Unlock editable code block","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"search":{"distance":100,"findAllMatches":true,"highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":true,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"No results found","snippetLength":30,"threshold":0.3,"useExtendedSearch":false},"version":"v0.3.6"};</script><script src="/js/theme.min.js" defer></script><script src="/js/custom.min.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script><br><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script></body>
+</html>
