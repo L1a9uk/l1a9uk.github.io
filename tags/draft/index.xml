@@ -3,35 +3,13 @@
     <title>Draft - Tag - Liagu</title>
     <link>http://localhost:1313/tags/draft/</link>
     <description>Draft - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/draft/" rel="self" type="application/rss+xml" /><item>
-  <title>Day2 我要rce</title>
-  <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</link>
-  <pubDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</guid>
-  <description><![CDATA[]]></description>
-</item>
-<item>
-  <title>Day1 Sql注⼊与数据库利⽤</title>
-  <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</link>
-  <pubDate>Tue, 04 Jun 2024 21:42:20 &#43;0800</pubDate>
-  <author>Author</author>
-  <guid>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</guid>
-  <description><![CDATA[[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; + ShipCity + &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request.]]></description>
-</item>
-<item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 19:34:59 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/draft/" rel="self" type="application/rss+xml" /><item>
   <title>Hugo美化</title>
   <link>http://localhost:1313/posts/90307b6/</link>
   <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
   <author>Author</author>
   <guid>http://localhost:1313/posts/90307b6/</guid>
-  <description><![CDATA[hugojs/css美化]]></description>
+  <description><![CDATA[]]></description>
 </item>
 </channel>
 </rss>

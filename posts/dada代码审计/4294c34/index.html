@@ -7,42 +7,22 @@
     <meta name="robots" content="noodp" />
     <title>Day1 Sql注⼊与数据库利⽤ - Liagu</title><meta name="author" content="">
 <meta name="author-link" content="">
-<meta name="description" content="[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request." /><meta name="keywords" content='代审' /><meta itemprop="name" content="Day1 Sql注⼊与数据库利⽤">
-<meta itemprop="description" content="[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request."><meta itemprop="datePublished" content="2024-06-04T21:42:20+08:00" />
-<meta itemprop="dateModified" content="2024-06-04T21:42:20+08:00" />
-<meta itemprop="wordCount" content="317">
-<meta itemprop="keywords" content="代审," /><meta property="og:title" content="Day1 Sql注⼊与数据库利⽤" />
-<meta property="og:description" content="[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-06-04T21:42:20+08:00" />
-<meta property="article:modified_time" content="2024-06-04T21:42:20+08:00" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Day1 Sql注⼊与数据库利⽤"/>
-<meta name="twitter:description" content="[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; &#43; ShipCity &#43; &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request."/>
+<meta name="description" content="" /><meta name="keywords" content='代审' />
+  <meta itemprop="name" content="Day1 Sql注⼊与数据库利⽤">
+  <meta itemprop="datePublished" content="2024-06-04T21:42:20+08:00">
+  <meta itemprop="dateModified" content="2024-06-04T21:42:20+08:00">
+  <meta itemprop="wordCount" content="729">
+  <meta itemprop="keywords" content="代审"><meta property="og:url" content="http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/">
+  <meta property="og:site_name" content="Liagu">
+  <meta property="og:title" content="Day1 Sql注⼊与数据库利⽤">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-04T21:42:20+08:00">
+    <meta property="article:modified_time" content="2024-06-04T21:42:20+08:00">
+    <meta property="article:tag" content="代审">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Day1 Sql注⼊与数据库利⽤">
+<meta name="twitter:description" content="">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/jpg" sizes="32x32" href="/assets/images/avatar.jpg">
@@ -57,7 +37,7 @@ string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(c
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1\/4294c34\/"
-    },"genre": "posts","keywords": "代审","wordcount":  317 ,
+    },"genre": "posts","keywords": "代审","wordcount":  729 ,
     "url": "http:\/\/localhost:1313\/posts\/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1\/4294c34\/","datePublished": "2024-06-04T21:42:20+08:00","dateModified": "2024-06-04T21:42:20+08:00","publisher": {
       "@type": "Organization",
       "name": "","logo": "https:\/\/th.bing.com\/th\/id\/OIP.g4xSH6iLsfp1qckHDRrtzQHaHZ?w=208\u0026h=207\u0026c=7\u0026r=0\u0026o=5\u0026dpr=1.2\u0026pid=1.7"},"description": ""
@@ -261,7 +241,7 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Day1 Sql注⼊与数据库利⽤</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="post-meta-line"><span title="published on 2024-06-04 21:42:20"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-04">2024-06-04</time></span>&nbsp;<span title="317 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 400 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+      Anonymous</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="post-meta-line"><span title="published on 2024-06-04 21:42:20"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-04">2024-06-04</time></span>&nbsp;<span title="729 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 800 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>4 minutes</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>Contents</span>
@@ -270,12 +250,46 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#不同语言调原数据库操作模块">不同语言调⽤原⽣数据库操作模块</a></li>
-    <li><a href="#调orm的错误写法">调⽤orm的错误写法</a>
+    <li><a href="#调orm的错误写法">调⽤orm的错误写法</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#核思维">核⼼思维</a></li>
+    <li><a href="#编程语">编程语⾔</a></li>
+    <li><a href="#注类型">注⼊类型</a></li>
+    <li><a href="#产注的输点">产⽣注⼊的输⼊点</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#宽字节注">宽字节注⼊</a>
       <ul>
-        <li><a href="#php">php：</a></li>
-        <li><a href="#javamybatis">java/MyBatis:</a></li>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#利">利⽤</a></li>
       </ul>
     </li>
+  </ul>
+
+  <ul>
+    <li><a href="#hibernate">Hibernate</a></li>
+    <li><a href="#利-1">利⽤</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#是宽字节注">⼜是宽字节注⼊</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#like关键字">like关键字</a></li>
+    <li><a href="#不能加引号的关键字">不能加引号的关键字</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#linux权限">linux权限</a></li>
+    <li><a href="#windows权限">windows权限</a></li>
+    <li><a href="#权限的基本关系">权限的基本关系</a></li>
+    <li><a href="#未授权rce">未授权rce</a></li>
+    <li><a href="#sql注">sql注⼊</a></li>
+    <li><a href="#sql注到命令执">sql注⼊到命令执⾏</a></li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><p>[toc]</p>
@@ -332,16 +346,10 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
   <a href="#%e8%b0%83orm%e7%9a%84%e9%94%99%e8%af%af%e5%86%99%e6%b3%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2><h3 id="php" class="heading-element"><span>php：</span>
-  <a href="#php" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>php没有啥⽐较出名的orm框架，基本是各web框架或者cms⾃⾏去实现⾃⼰的orm（利⽤点， ⼀套闭源cms的orm可能实现得并不规范，产⽣漏洞）我们后⾯会讲的“某cms sql注⼊挖掘”， 它⾥⾯就⾃⼰写了⼀套orm，还有防注⼊，但还是被绕过了。所以相对⽐较多种多样，这⾥不 举例，后⾯在实战案例中讲。</p>
-<h3 id="javamybatis" class="heading-element"><span>java/MyBatis:</span>
-  <a href="#javamybatis" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>java的持久层技术解决⽅案可以发展历程与MyBatis的详解看这⾥ MyBatis需要有⼀个xml配置⽂件来来绑定映射关系</p>
+</h2><p><strong>php：</strong></p>
+<p>php没有啥⽐较出名的orm框架，基本是各web框架或者cms⾃⾏去实现⾃⼰的orm（利⽤点， ⼀套闭源cms的orm可能实现得并不规范，产⽣漏洞）我们后⾯会讲的“某cms sql注⼊挖掘”， 它⾥⾯就⾃⼰写了⼀套orm，还有防注⼊，但还是被绕过了。所以相对⽐较多种多样，这⾥不 举例，后⾯在实战案例中讲。</p>
+<p><strong>java/MyBatis:</strong></p>
+<p>java的持久层技术解决⽅案可以发展历程与MyBatis的详解看这⾥ MyBatis需要有⼀个xml配置⽂件来来绑定映射关系</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>select id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;findUserByName&#34;</span> parameterType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;java.lang.String&#34;</span> 
 </span></span><span style="display:flex;"><span>resultType<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cn.itcast.mybatis.po.User&#34;</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;!--</span> 拼接 MySQL,引起 SQL 注<span style="color:#960050;background-color:#1e0010">⼊</span> <span style="color:#f92672">--&gt;</span>
@@ -356,25 +364,16 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
         sqlSession.close();
         System.out.println(list);
     }
- }</code></pre><h4 id="为什么错误" class="heading-element"><span>为什么错误</span>
-  <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%94%99%e8%af%af" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h4><p>在 MyBatis 中，<code>SELECT * FROM table WHERE username = '${value}'</code> 和 <code>SELECT * FROM table WHERE username = '#{value}'</code> 的主要区别在于它们的参数替换方式以及可能带来的 SQL 注入风险。</p>
-<h5 id="heading" class="heading-element"><span>$</span>
-  <a href="#heading" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h5><ul>
+ }</code></pre><p><strong>为什么错误</strong></p>
+<p>在 MyBatis 中，<code>SELECT * FROM table WHERE username = '${value}'</code> 和 <code>SELECT * FROM table WHERE username = '#{value}'</code> 的主要区别在于它们的参数替换方式以及可能带来的 SQL 注入风险。</p>
+<p><strong>${}</strong></p>
+<ul>
 <li><strong>原理</strong>：<code>${}</code> 是 MyBatis 的字符串替换占位符，它会在 SQL 语句生成前直接替换成实际的参数值。</li>
 <li><strong>风险</strong>：因为 <code>${}</code> 是直接替换，所以如果参数 <code>value</code> 包含了恶意的 SQL 代码，就会导致 SQL 注入漏洞。例如，如果 <code>value</code> 是 <code>&quot;admin' OR '1'='1&quot;</code>，生成的 SQL 语句会变成 <code>SELECT * FROM table WHERE username = 'admin' OR '1'='1'</code>，这会导致数据库返回所有用户的数据。</li>
 <li><strong>使用场景</strong>：适用于动态表名或列名等情况下，但不建议用于用户输入的参数值</li>
 </ul>
-<h5 id="heading-1" class="heading-element"><span></span>
-  <a href="#heading-1" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h5><ul>
+<p><strong>#{}</strong></p>
+<ul>
 <li><strong>原理</strong>：<code>#{}</code> 是 MyBatis 的参数占位符，它会在 SQL 语句生成时使用预编译的方式将参数值传递给数据库。( 相当于出去取字符串)</li>
 <li><strong>安全性</strong>：因为参数值是通过预编译传递的，数据库会将其作为数据处理，而不会执行其中的 SQL 代码，从而避免 SQL 注入漏洞。例如，如果 <code>value</code> 是 <code>&quot;admin' OR '1'='1&quot;</code>，生成的 SQL 语句会变成 <code>SELECT * FROM table WHERE username = ?</code>，并且参数值 <code>admin' OR '1'='1'</code> 会作为数据传递给数据库。</li>
 <li><strong>使用场景</strong>：建议始终使用 <code>#{}</code> 来传递用户输入的参数，以确保 SQL 注入安全性。</li>
@@ -384,7 +383,262 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
 DefaultParameterHandler中进⾏设置占位符的操作  --&gt;预编译
 $也是绑定变量的形式，{value}是直接被替换为了对应的值，没有参数映射，不会进⾏设置占位
 符的操作   --&gt;拼接</code></pre><p>所以这也是很多代码审计初学者或者很多课程，上来就让⼤家去找$符号的原因。⼤家后续遇 到MyBatis也确实可以这么搞，对于⼩cms简单有效。</p>
-<h1 id="总结" class="heading-element"><span>总结:</span>
+<p><strong>python/flask/sqlalchemy:</strong></p>
+<p>sqlalchemy是flask最经常配套的orm框架，在许多django项⽬中也常常看到身影。也是⽬前 python上⽤得最⽕的orm框架。 具体使⽤的教程，给⼤家贴⼏个帖⼦，⼤家可以去细看：</p>
+<p>这⾥是⼀个有注⼊漏洞的例⼦</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/&#34;</span>, methods<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;GET&#34;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>(): 
+</span></span><span style="display:flex;"><span>username <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;username&#39;</span>) 
+</span></span><span style="display:flex;"><span>res <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>query(table)<span style="color:#f92672">.</span>filter(<span style="color:#e6db74">&#34;username</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(username))</span></span></code></pre></div><p>原因跟上⾯MyBatis类似，依然是⽤户输⼊其实是**拼接后才导⼊**sqlalchemy层的（不同层⾯组 件的交汇处）</p>
+<p>正确的写法</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span> <span style="color:#a6e22e">@app.route</span>(<span style="color:#e6db74">&#34;/&#34;</span>, methods<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;GET&#34;</span>])
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test</span>():
+</span></span><span style="display:flex;"><span> username <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span>args<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;username&#39;</span>)
+</span></span><span style="display:flex;"><span> res <span style="color:#f92672">=</span> db<span style="color:#f92672">.</span>session<span style="color:#f92672">.</span>query(table)<span style="color:#f92672">.</span>filter(table<span style="color:#f92672">.</span>username <span style="color:#f92672">==</span> username)</span></span></code></pre></div><h1 id="sql注到底在注什么" class="heading-element"><span>sql注⼊到底在注⼊什么</span>
+  <a href="#sql%e6%b3%a8%e5%88%b0%e5%ba%95%e5%9c%a8%e6%b3%a8%e4%bb%80%e4%b9%88" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>我们刚才讲了很多编程语⾔的案例，php/.net/python/java，好像分类很多，很复杂。⽽且我 们其实还没讲更多其他的分类，⽐如如果你去看那些基础渗透教程。可能会这样分类：</p>
+<pre tabindex="0"><code>sql联合查询注⼊
+sql堆叠注⼊
+sql报错注⼊-N个payload
+sql时间盲注
+sql布尔盲注
+sql带外数据
+sql注⼊执⾏命令 --》现在基本都是sqlmap os-shell了。。</code></pre><p>如果致⼒于做⼀个安服或者渗透岗，当然不⽤去归结共性。但是对于我们⽽⾔，总结⼀下还是 ⽐较有价值的。</p>
+<h2 id="核思维" class="heading-element"><span>核⼼思维</span>
+  <a href="#%e6%a0%b8%e6%80%9d%e7%bb%b4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><pre tabindex="0"><code>sql注⼊，就是在执⾏⼀段sql语句，关键是数据库类型</code></pre><p>核⼼思维就是：<strong>想法设法去执⾏⼀条完全的sql语句，把数据带出来或把命令传进去。</strong> 与之将对的，以下虽然是问题的⼀部分，但不能称之为本技术的核⼼思维。</p>
+<h2 id="编程语" class="heading-element"><span>编程语⾔</span>
+  <a href="#%e7%bc%96%e7%a8%8b%e8%af%ad" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>不同编程语⾔最终的⽬的都是为了将我们的payload送⼊数据库层进⾏执⾏，能看到注⼊点即 可，语⾔不重要。</p>
+<h2 id="注类型" class="heading-element"><span>注⼊类型</span>
+  <a href="#%e6%b3%a8%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>不需要特别关注分类，所有的分类都是sql语句的不同写法⽽已，⽐编程语⾔相对重要⼀些。</p>
+<ol>
+<li>
+<p>能否堆叠注⼊</p>
+<p>我们之前说了，⼀条sql语句，最终会被解析成⼀段控制序列</p>
+<pre tabindex="0"><code> action(动作): select
+ object（对象）: table
+ subject（⽬标客体）: *
+ condition（条件）:
+ key: username
+ value: $username // ⽤户输⼊</code></pre><p>如果能够使⽤堆叠注⼊，我们就能跳出action动作，执⾏其他动作（⼀条新的sql语句），肯定 危害更⼤。 ⽬前来看，堆叠注⼊越来越少。经验上来看，mssql数据库的堆叠注⼊最多；oracle数量基本 差不多，稍微少⼀点；mysql不多。</p>
+</li>
+<li>
+<p>爆数据的速度上</p>
+<p>报错~=联合查询&gt;带外数据&gt;布尔盲注&gt;时间盲注</p>
+</li>
+</ol>
+<h2 id="产注的输点" class="heading-element"><span>产⽣注⼊的输⼊点</span>
+  <a href="#%e4%ba%a7%e6%b3%a8%e7%9a%84%e8%be%93%e7%82%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>输⼊点⽐上⾯相对⼜重要⼀些。因为输⼊点决定了我们能⽤什么样的Vector（攻击向量），以 及是否需要绕过。这个下⾯会结合绕过去讲。</p>
+<pre tabindex="0"><code>select $username$,password from $table$ where $username2$ = &#39;$dada$&#39; 
+order by $username3$ desc limit $0$,1</code></pre><h1 id="那些较有撸点的sql注" class="heading-element"><span>那些⽐较有撸点的sql注⼊</span>
+  <a href="#%e9%82%a3%e4%ba%9b%e8%be%83%e6%9c%89%e6%92%b8%e7%82%b9%e7%9a%84sql%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 id="宽字节注" class="heading-element"><span>宽字节注⼊</span>
+  <a href="#%e5%ae%bd%e5%ad%97%e8%8a%82%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>在utf-8还不那么通⽤的时候，各种⽜⻤蛇神都群魔乱舞。各种字符集都存在。（包括现在， 如果你去搞⼀个jp、或者kr的站，很可能碰到其他的宽字符集）就造成了⼀种新的注⼊⽅式， 叫宽字节注⼊。</p>
+<h3 id="概念" class="heading-element"><span>概念</span>
+  <a href="#%e6%a6%82%e5%bf%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><pre tabindex="0"><code>我们知道字节是计算机存储世界中最⼩的衡量单位，1Byte = 8bits。所以⼀个字节最⼤能够表
+示2^8=256个字符。
+所以：
+  对ascii编码⽽⾔，⼀个字符⽤⼀个字节就可以表示，所以ascii编码最多可以表示256个字
+符。
+  对GBK编码⽽⾔，⼀个汉字字符需要⽤两个字节表示。所以gbk编码理论上最多可以表示
+256*256个字符</code></pre><p>关于字符集、字符编码的更多知识，⼤家可以去百度了解。</p>
+<h3 id="利" class="heading-element"><span>利⽤</span>
+  <a href="#%e5%88%a9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>因为宽字符的存在，导致⼀些防注⼊的⽅式会被绕过。我们以代码的形式来讲解。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span> $db <span style="color:#f92672">=</span> <span style="color:#a6e22e">init_db</span>();
+</span></span><span style="display:flex;"><span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#e6db74">&#34;set SET NAMES &#39;gbk&#39;);  //设置gbk字符集
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#e6db74">$username</span><span style="color:#e6db74"> = addslashes(</span><span style="color:#e6db74">$_GET[&#39;username&#39;]</span><span style="color:#e6db74">);  //input: fuckdada&#39; and 1=1#
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> </span><span style="color:#e6db74">$db-&gt;query</span><span style="color:#e6db74">(&#34;</span><span style="color:#a6e22e">select</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">table</span> <span style="color:#a6e22e">where</span> <span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;$username&#39;</span><span style="color:#e6db74">&#34;);  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">?&gt;
+</span></span></span></code></pre></div><p>我们来考虑下sql语句会是怎么样的呈现,输⼊fuckdada&rsquo; and 1=1#</p>
+<p>在这种场景下，我们没办法进⾏sql注⼊，因为我们的单引号被转义了，我们没办法侵⼊到控 制流去。 输⼊fuckdada%df&rsquo; and 1=1# 数据在存储的时候⼀定是以字节存储的，但是数据解读的时候，都是以字符的标准去解读的。 所以，在连接数据库进⾏sql执⾏（执⾏就是⼀种对存储的解读）时，会按照字符集编码的规 范去解读，所以遇到了\xDF\x5C的时候，会解读成⼀个字符。</p>
+<p>此时我们来关注下输⼊流转</p>
+<pre tabindex="0"><code>url输⼊--&gt;php字符串变量--&gt;addslashes--&gt;sql语句--&gt;数据库
+fuckdada%DF&#39; and 1=1#  --&gt; fuckdada\xDF&#39; and 1=1# --&gt; fuckdada\xDF\&#39; and 
+1=1# --&gt;
+select * from table where username = &#39;fuckdada運&#39; and 1=1#&#39;  //数据流成功⼊侵到控制流</code></pre><p>有个在线<a href="https://www.23bei.com/tool/54.html#"target="_blank" rel="external nofollow noopener noreferrer">⽹站</a> ⼤家可以试试编码转换 这⾥有个点要讲解⼀下，我在写这个⽂档翻阅资料的时候，发现⽹络上⼤部分宽字符注⼊，都 是以%df作为逃逸字符来进⾏逃逸。但是没有讲原因。原因在<a href="https://zh.m.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83"target="_blank" rel="external nofollow noopener noreferrer">这⾥</a> 其实并不必须⽤%df，符合要求的编码即可。</p>
+<p><img loading="lazy" src="assets/image-20240604224351691.png" alt="image-20240604224351691" srcset="assets/image-20240604224351691.png?size=small, assets/image-20240604224351691.png?size=medium 1.5x, assets/image-20240604224351691.png?size=large 2x" data-title="image-20240604224351691" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>所以，代码审计中审阅宽字节注⼊的⽅式，就是查看数据库连接⽂件（⼀般名字类似 conn.php），检查其字符集类型是什么，如果不是utf-8（因为脚本的字符集默认是utf-8）就 可能有注⼊产⽣。 另外给⼤家贴⼀点参考<a href="https://xz.aliyun.com/t/1719?time__1311=n4%2Bxni0QDQo7u4Cwq0y%2Bb%2BOi%3DeGQzkkQDgYD"target="_blank" rel="external nofollow noopener noreferrer">资料</a></p>
+<h1 id="hql注" class="heading-element"><span>hql注⼊</span>
+  <a href="#hql%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>这个⽬前国内讲解的⽐较少，我也只是之前在⼏个项⽬中遇到过。⽐较有意思，稍微带⼀下。</p>
+<h2 id="hibernate" class="heading-element"><span>Hibernate</span>
+  <a href="#hibernate" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Hibernate是⼀种ORM框架，⽤来映射与tables相关的类定义（代码），并包含⼀些⾼级特 性，包括缓存以及继承，通常在Java与.NET中使⽤（可参考NHibernate），但在Java⽣态系 统中更受欢迎。近来似乎逐渐有被Mybatis取代的趋势。</p>
+<p>与Mybatis不同的是，Hibernate虽然也⽤了xml作为映射模型。但是他构成了⼀套⾃⼰的解析 引擎和语法，也就是HQL。</p>
+<p>关于HQL的更多知识，我也找了⽂档</p>
+<pre tabindex="0"><code>https://www.cnblogs.com/chenssy/archive/2012/07/17/2594919.html
+https://blog.51cto.com/jiaojusuimu/1881287</code></pre><p>⽤户的输⼊作为HQL的⼀部分，先经过Hibernate解析引擎，渲染成sql语句，然后再进⼊到 数据库层进⾏查询。</p>
+<h2 id="利-1" class="heading-element"><span>利⽤</span>
+  <a href="#%e5%88%a9-1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>HQL注⼊的漏洞产⽣与SQL注⼊并⽆差异，也是直接通过拼接字符串导致的注⼊。依然符合我 们的定律</p>
+<pre tabindex="0"><code>我们在代码层的输⼊，破坏了HQL层的结构，最终蔓延到SQL数据库层，改变了控制流。</code></pre><p>相对于SQL注⼊⽽⾔，HQL增加的挑战就是我们插⼊的数据，⾸先必须经过HQL渲染通过才能 进⼊SQL数据库获取数据。</p>
+<p>⾮常棘⼿、拦住了很多攻击，相当于我们需要构造⼀条payload，⼜符合当前的HQL结构， HQL渲染后的sql⼜能正常的在数据库执⾏。</p>
+<p>⽬前，⼀般的利⽤⽅式是，不考虑sql能够完全执⾏成功，⽽是利⽤sql报错注⼊+框架开启报 错，将有⽤的数据直接在错误回显中爆出来。</p>
+<p>具体的案例给到⼤家，这⾥不展开，暂时作为⼀个知识⾯了解</p>
+<pre tabindex="0"><code>https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/hql-injection-exploitation-in-mysql/
+https://blog.sonarsource.com/exploiting-hibernate-injections/
+https://www.sec-in.com/article/144
+ https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/SQL%20Injection/HQL%20Injection.md
+ https://conference.hitb.org/hitbsecconf2016ams/materials/D2T2%20-%20Mikhail%20Egorov%20and%20Sergey%20Soldatov%20-%20New%20Methods%20for%20Exploiting%20ORM%20Injections%20in%20Java%20Applications.pdf</code></pre><h1 id="预编译模式下的注" class="heading-element"><span>预编译模式下的注⼊</span>
+  <a href="#%e9%a2%84%e7%bc%96%e8%af%91%e6%a8%a1%e5%bc%8f%e4%b8%8b%e7%9a%84%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 id="是宽字节注" class="heading-element"><span>⼜是宽字节注⼊</span>
+  <a href="#%e6%98%af%e5%ae%bd%e5%ad%97%e8%8a%82%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们先看例⼦</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span> $username <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;username&#39;</span>];
+</span></span><span style="display:flex;"><span> $db <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mysql:host=127.0.0.1;dbname=test;charset=gbk&#34;</span>;
+</span></span><span style="display:flex;"><span> $dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span> $passwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span> $conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>($dbs, $dbname, $passwd);
+</span></span><span style="display:flex;"><span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#e6db74">&#39;SET NAMES GBK&#39;</span>);
+</span></span><span style="display:flex;"><span> $stmt <span style="color:#f92672">=</span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">prepare</span>(<span style="color:#e6db74">&#34;select * from table where username = 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">:username&#34;</span>);
+</span></span><span style="display:flex;"><span> $stmt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bindParam</span>(<span style="color:#e6db74">&#34;:username&#34;</span>,$username);
+</span></span><span style="display:flex;"><span> $stmt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">execute</span>();
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>因为，在</p>
+<pre tabindex="0"><code>$stmt = $conn-&gt;prepare(&#34;select * from table where username = 
+:username&#34;);
+ ==&gt;$stmt-&gt;sql = &#34;select * from table where username = 
+&#39;${addslashes($input)}&#39;&#34;</code></pre><p>此时的输⼊流转是不是跟刚才的宽字节注⼊的讲解⼀模⼀样？<img loading="lazy" src="assets/image-20240604225037873.png" alt="image-20240604225037873" srcset="assets/image-20240604225037873.png?size=small, assets/image-20240604225037873.png?size=medium 1.5x, assets/image-20240604225037873.png?size=large 2x" data-title="image-20240604225037873" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h1 id="法预编译的输点" class="heading-element"><span>⽆法预编译的输⼊点</span>
+  <a href="#%e6%b3%95%e9%a2%84%e7%bc%96%e8%af%91%e7%9a%84%e8%be%93%e7%82%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>刚才我们在讲MyBatis注⼊的时候，其实有涉及⼀点。</p>
+<p>这⾥再展开讲讲那些没办法⽤orm（没办法预编译）去保护的输⼊点，并且这种是通例，也就 是⽆视语⾔的。</p>
+<h2 id="like关键字" class="heading-element"><span>like关键字</span>
+  <a href="#like%e5%85%b3%e9%94%ae%e5%ad%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们知道sql语句的模糊查找⾥⾯⽤的关键字like，⽽like关键字默认是不会预编译的(如果使⽤ Mybatis则是预编译报错)。数据库⽅给出的原因好像是like预编译会造成慢查询和DOS。</p>
+<p>只能⼿动去添加预编译</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span> $username <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;username&#39;</span>];
+</span></span><span style="display:flex;"><span> $db <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mysql:host=127.0.0.1;dbname=test;&#34;</span>;
+</span></span><span style="display:flex;"><span> $dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span> $passwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span> $conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>($dbs, $dbname, $passwd);
+</span></span><span style="display:flex;"><span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#e6db74">&#39;SET NAMES GBK&#39;</span>);
+</span></span><span style="display:flex;"><span> $stmt <span style="color:#f92672">=</span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">prepare</span>(<span style="color:#e6db74">&#34;select * from table where username like 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;%:username%&#39;&#34;</span>);  <span style="color:#75715e">//不⽣效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$stmt <span style="color:#f92672">=</span> $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">prepare</span>(<span style="color:#e6db74">&#34;select * from table where username like 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">concat(&#39;%&#39;,:username,&#39;%&#39;&#34;</span>);  <span style="color:#75715e">//⽣效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$stmt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bindParam</span>(<span style="color:#e6db74">&#34;:username&#34;</span>,$username);
+</span></span><span style="display:flex;"><span> $stmt<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">execute</span>();
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>可能很多开发会遗漏这个点，导致存在注⼊。</p>
+<p>或者⼀些java的开发，Mybatis编译报错，然后他们⾃⼰去添加过滤（过滤没写好）或者不过 滤（使⽤原⽣语句），导致GG。</p>
+<p>与之类似的还有IN关键字，该位置也默认不能预编译，需要在预编译语法中去for循环，有些 程序员为了⽅便，可能也会在这边偷⼯减料。</p>
+<h2 id="不能加引号的关键字" class="heading-element"><span>不能加引号的关键字</span>
+  <a href="#%e4%b8%8d%e8%83%bd%e5%8a%a0%e5%bc%95%e5%8f%b7%e7%9a%84%e5%85%b3%e9%94%ae%e5%ad%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们刚才分析了预编译模式下的宽字节注⼊，我们可以发现，预编译+绑定变量的效果，有点 类似于做了两个步骤</p>
+<pre tabindex="0"><code>$newInput = addslashes($input)   //内容转义
+sql = select * from table where column = &#39;$newInput&#39;  //强制⽤单引号包裹</code></pre><p>那么，结合我们刚才讲的，产⽣注⼊的输⼊点</p>
+<pre tabindex="0"><code>select $username$,password from $table$ where $username2$ = &#39;$dada$&#39; 
+order by $username3$ $desc$ limit $0$,1</code></pre><p>是否有输⼊点是必然不能加单引号的呢，如果不能加单引号，那么就不能预编译 于是我们找到了</p>
+<pre tabindex="0"><code>$username$,$username2$,$table$,$username3$,$desc$,$0$</code></pre><p>这些地⽅都是不能加单引号的，总结就是</p>
+<pre tabindex="0"><code>表名、列名、limit⼦句、order by[desc/asc]</code></pre><p>跟刚才⼀样，可能很多开发会遗漏这个点，导致存在注⼊。</p>
+<p>或者⼀些java的开发，Mybatis编译报错，然后他们⾃⼰去添加过滤（过滤没写好）或者不过 滤（使⽤原⽣语句），导致GG。</p>
+<p>更多的分析⽂档，可以看这⾥：</p>
+<pre tabindex="0"><code>https://forum.butian.net/share/1559
+http://cn-sec.com/archives/286656.html
+https://codeantenna.com/a/WzaLCig9qw</code></pre><h1 id="从数据库权限到操作系统权限" class="heading-element"><span>从数据库权限到操作系统权限</span>
+  <a href="#%e4%bb%8e%e6%95%b0%e6%8d%ae%e5%ba%93%e6%9d%83%e9%99%90%e5%88%b0%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e6%9d%83%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>关于具体的利⽤篇，下周我会以⽂档的形式分享。⽆⾮是mysql/postgresql/mssql/oracle这些 数据库权限能够做什么事。但是我会讲⽹上的零零散散总结梳理清楚给⼀份⼤全给⼤家。不属 于我们代码审计的重点，⽽是延伸利⽤，不占⽤⼤家的课程时间。</p>
+<p>这⾥想分享的是操作系统权限和权限的基本关系</p>
+<h2 id="linux权限" class="heading-element"><span>linux权限</span>
+  <a href="#linux%e6%9d%83%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><img loading="lazy" src="assets/image-20240604225400343.png" alt="image-20240604225400343" srcset="assets/image-20240604225400343.png?size=small, assets/image-20240604225400343.png?size=medium 1.5x, assets/image-20240604225400343.png?size=large 2x" data-title="image-20240604225400343" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>在linux架构下，除了root是特权⽤户，其他能接触到的⽤户基本上是平权的。</p>
+<p>⽐如，我在⼀个web下拿到⼀个webshell，我的权限可能是</p>
+<pre tabindex="0"><code>java/tomcat/www-data/httpd/apache2</code></pre><p>⽐如，我通过数据库的利⽤，拿到⼀个命令执⾏的权限，我的权限可能是</p>
+<pre tabindex="0"><code> oracle/mysql/postgres</code></pre><p>他们之间除⾮做了特殊的限制，并⽆太⼤不同。 所以，如果我们在linux下已经拿到⼀个webshell且能执⾏cmdshell的情况下，没有必要特地去 利⽤数据库的利⽤再拿⼀个cmdshell的权限，因为两者能做的事情⼤差不差</p>
+<h2 id="windows权限" class="heading-element"><span>windows权限</span>
+  <a href="#windows%e6%9d%83%e9%99%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>windows上与linux稍稍不同，但也很简单。</p>
+<p>在win server上，web/database⼀般以服务的⽅式启动。那么权限就有可能发⽣变化。</p>
+<p>许多时候，因为管理员配置不当，就会有很多服务跑在SYSTEM权限上，所以我们就会看到 ⼀些很怪异的现象。</p>
+<pre tabindex="0"><code>⽇了⼀个iis的站，权限很低。  --&gt;iis⼀般是通过系统组件安装，安装时默认低权限服务
+iis_pool/guests
+同服务器有个apache的站，写了个shell，发现变成了system权限  --&gt;apache是管理员⾃⾏
+安装，不⼩⼼就配置成了system权限的服务
+服务器上装了mssql，通过密码连上，sa权限执⾏命令，发现⼜是system权限 --&gt;mssql是管理
+员⾃⾏安装，不⼩⼼就配置成了system权限的服务
+服务器上装了mysql，通过密码连上，虽然不能执⾏命令，但发现居然能写启动项 --&gt;mysql是管
+理员⾃⾏安装，不⼩⼼就配置成了system权限的服务</code></pre><h2 id="权限的基本关系" class="heading-element"><span>权限的基本关系</span>
+  <a href="#%e6%9d%83%e9%99%90%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%85%b3%e7%b3%bb" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>权限的基本关系，其实没啥好讲的，就⼀句话：</p>
+<pre tabindex="0"><code>认清数据平⾯</code></pre><p>eg:</p>
+<pre tabindex="0"><code>在cms/web层⾯：web后台管理员权限&gt;web前台会员权限&gt;游客权限
+在数据库层⾯:root⽤户/sa⽤户/postgres⽤户&gt;普通杂七杂⼋⽤户
+在操作系统层⾯:root &gt; 所有其他⽤户</code></pre><p>这还⽤讲吗？</p>
+<p>在同⼀个数据平⾯上，权限关系很好理清。 关键还是这句话：</p>
+<pre tabindex="0"><code>认清数据平⾯</code></pre><h2 id="未授权rce" class="heading-element"><span>未授权rce</span>
+  <a href="#%e6%9c%aa%e6%8e%88%e6%9d%83rce" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>如果我们以游客的权限，拿到⼀个rce漏洞（也就是未授权rce），那么我们的权限是什么？是 web后台管理员吗？⾮也。此时我们的数据平⾯是在操作系统层⾯。</p>
+<p>在操作系统层⾯，我们的bash进程是httpd进程派⽣的，所以与httpd进程是同层级的，所以此 时我可以读写web⽬录的任意⽂件（前提是web⽬录本身对httpd可读写）</p>
+<h2 id="sql注" class="heading-element"><span>sql注⼊</span>
+  <a href="#sql%e6%b3%a8" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>如果我们以游客权限，拿到⼀个sql注⼊点，那么我们的权限是什么？是web后台管理员吗？ ⾮也。此时我们的数据平⾯是在数据库层⾯。</p>
+<p>在数据库层⾯，我们⽬前就是mysql进程维护的⼀个通信线程，我们就是数据库的root或者普 通库权限（取决于web数据库配置⽂件中定义的⽤户）。</p>
+<h2 id="sql注到命令执" class="heading-element"><span>sql注⼊到命令执⾏</span>
+  <a href="#sql%e6%b3%a8%e5%88%b0%e5%91%bd%e4%bb%a4%e6%89%a7" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>如果我们以游客权限，拿到⼀个sql注⼊点，并且这个注⼊点可以执⾏命令，那么我们的权限 是什么？是数据库的root吗？⾮也。此时我们的数据平⾯是在操作系统层⾯。</p>
+<p>在操作系统层⾯，我们⽬前就是mysql进程派⽣的⼀个bash进程，所以与mysql进程是同层级 的，所以此时我可以读写mysql数据库⽂件⽬录的⽂件。也⼤概率有权限读web⽬录的⽂件</p>
+<h1 id="总结" class="heading-element"><span>总结</span>
   <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -435,7 +689,7 @@ $也是绑定变量的形式，{value}是直接被替换为了对应的值，没
 </div><div class="footer-line">
         <span id="run-time"></span>
       </div>
-        <div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.124.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.6"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        <div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.125.4"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.6"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
               <a href="/"></a></span></div></div>

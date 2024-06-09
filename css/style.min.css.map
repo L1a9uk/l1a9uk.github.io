@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "D:/desktop/www",
+	"sourceRoot": "C:/Users/zguo5/Desktop/www",
 	"sources": [
 		"themes/FixIt/assets/css/style.scss",
 		"themes/FixIt/assets/css/_variables.scss",

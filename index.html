@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
   <head>
-	<meta name="generator" content="Hugo 0.124.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.125.4"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
       <meta name="theme" content='FixIt v0.3.6'>
     
@@ -10,13 +10,15 @@
     <meta name="robots" content="noodp" />
     <title>Liagu</title><meta name="author" content="">
 <meta name="author-link" content="">
-<meta name="description" content="" /><meta itemprop="name" content="Liagu">
-<meta itemprop="description" content=""><meta property="og:title" content="Liagu" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Liagu"/>
-<meta name="twitter:description" content=""/>
+<meta name="description" content="" />
+  <meta itemprop="name" content="Liagu">
+  <meta itemprop="dateModified" content="2024-06-04T22:00:29+08:00"><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="Liagu">
+  <meta property="og:title" content="Liagu">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Liagu">
+<meta name="twitter:description" content="">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/jpg" sizes="32x32" href="/assets/images/avatar.jpg">
@@ -223,38 +225,32 @@ console.log(`
     </a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/">Day2 我要rce</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 22:00:29'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="content"></div><div class="post-footer">
-    <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/draft/' class="post-tag">Draft</a></div></div>
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 22:00:29'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="content"></div><div class="post-footer">
+    <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E4%BB%A3%E5%AE%A1/' class="post-tag">代审</a></div></div>
 </article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/">Day1 Sql注⼊与数据库利⽤</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 21:42:20'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="content">[toc]
-sql注⼊的起源与发展:
-SQL注⼊第⼀次为公众所知，是在1998年的著名⿊客杂志《Phrack》第54期上，⼀位名叫rfp 的⿊客发表了⼀篇题为“NT Web Technology Vulnerabilities”的⽂章。 在⽂章中，第⼀次向公众介绍了这种新型攻击。下⾯是当时给出的例⼦，现在看已经很古⽼ 了。是伪代码的表述形式。
-var ShipCity;ShipCity = Request.from(&#34;ShipCity&#34;);var sql = &#34;select * from OrderTable where ShipCity = &#39;&#34; + ShipCity + &#34;&#39;&#34;;从那开始乃⾄⼏年前(2015,2016)，sql注⼊都⼀直名列⽹站安全、web安全的头把交椅，主要就是因为其 攻击简单、攻击⼿法多样、危害巨⼤（拿数据库、什么拿shell、拿系统权限）。 近⼏年，因为规范化的框架使⽤、orm的普及，基本在框架层⾯就解决了⼤部分普通sql注⼊ 的问题，sql注⼊越来越难，所以表现就是sql注⼊不那么受关注了。但需要注意的是，sql注⼊ 仍然是危害巨⼤的攻击⼿法。
-sql注⼊的基础代码样例不同语言调⽤原⽣数据库操作模块php
-&lt;?php $db = init_db(); $username = $_GET[&#39;username&#39;]; //input: fuckdada&#39; and 1=1# $db-&gt;query(&#34;select * from table where username = &#39;$username&#39;&#34;); ?&gt; .net/aspx：
-string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(connectionstring);con.Open();string username = Request.</div><div class="post-footer">
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-06-04 21:42:20'>published on <time datetime="2024-06-04">2024-06-04</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" class="post-category" title="Category - Dada代码审计"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Dada代码审计</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E4%BB%A3%E5%AE%A1/' class="post-tag">代审</a></div></div>
 </article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/6b2c7f9/">电脑常用命令</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-26 13:13:11'>published on <time datetime="2024-05-26">2024-05-26</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/" class="post-category" title="Category - 日常分享"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 日常分享</a></span></div><div class="content">电脑快捷键</div><div class="post-footer">
+      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-26 13:13:11'>published on <time datetime="2024-05-26">2024-05-26</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%97%A5%E5%B8%B8%E5%88%86%E4%BA%AB/" class="post-category" title="Category - 日常分享"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 日常分享</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/6b2c7f9/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/%E5%BF%AB%E6%8D%B7%E5%B0%8F%E6%8A%80%E5%B7%A7/' class="post-tag">快捷小技巧</a></div></div>
 </article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><a href="/posts/b28d323/">CE修改器 Usages</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-23 21:00:46'>published on <time datetime="2024-05-23">2024-05-23</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/tools/" class="post-category" title="Category - Tools"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Tools</a></span></div><div class="content">CE修改器-usage</div><div class="post-footer">
+      Liagu</span></span>&nbsp;<span class="post-publish" title='2024-05-23 21:00:46'>published on <time datetime="2024-05-23">2024-05-23</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/tools/" class="post-category" title="Category - Tools"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Tools</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/b28d323/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/tools-usage/' class="post-tag">Tools-Usage</a></div></div>
 </article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/90307b6/">Hugo美化</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-16 19:34:59'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="content">hugojs/css美化</div><div class="post-footer">
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-16 19:34:59'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/draft/" class="post-category" title="Category - Draft"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Draft</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/90307b6/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/draft/' class="post-tag">Draft</a></div></div>
 </article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h2 class="single-title" itemprop="name headline"><span title="Repost" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><a href="/posts/90307b6/">Src技巧</a>
   </h2><div class="post-meta"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-16 19:34:59'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/src/" class="post-category" title="Category - Src"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Src</a></span></div><div class="content">hugojs/css美化</div><div class="post-footer">
+      Anonymous</span></span>&nbsp;<span class="post-publish" title='2024-05-16 19:34:59'>published on <time datetime="2024-05-16">2024-05-16</time></span><span class="post-included-in">&nbsp;included in <a href="/categories/src/" class="post-category" title="Category - Src"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Src</a></span></div><div class="content"></div><div class="post-footer">
     <a href="/posts/90307b6/">Read More</a><div class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href='/tags/src/' class="post-tag">Src</a></div></div>
 </article>
 <ul class="pagination"><li class="page-item active">
@@ -283,7 +279,7 @@ string connectionstring = &#34;xxx&#34;;SqlConnection con = new SqlConnection(c
 </div><div class="footer-line">
         <span id="run-time"></span>
       </div>
-        <div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.124.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.6"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        <div class="footer-line powered">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.125.4"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> | Theme - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.6"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
               <a href="/"></a></span></div></div>
