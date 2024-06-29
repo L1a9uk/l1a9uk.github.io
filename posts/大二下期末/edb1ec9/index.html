@@ -11,7 +11,7 @@
   <meta itemprop="name" content="Matlab复习">
   <meta itemprop="datePublished" content="2024-06-29T14:45:56+08:00">
   <meta itemprop="dateModified" content="2024-06-29T14:45:56+08:00">
-  <meta itemprop="wordCount" content="155">
+  <meta itemprop="wordCount" content="184">
   <meta itemprop="keywords" content="期末"><meta property="og:url" content="http://localhost:1313/posts/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB/edb1ec9/">
   <meta property="og:site_name" content="Liagu">
   <meta property="og:title" content="Matlab复习">
@@ -37,7 +37,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB\/edb1ec9\/"
-    },"genre": "posts","keywords": "期末","wordcount":  155 ,
+    },"genre": "posts","keywords": "期末","wordcount":  184 ,
     "url": "http:\/\/localhost:1313\/posts\/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB\/edb1ec9\/","datePublished": "2024-06-29T14:45:56+08:00","dateModified": "2024-06-29T14:45:56+08:00","publisher": {
       "@type": "Organization",
       "name": "","logo": "https:\/\/th.bing.com\/th\/id\/OIP.g4xSH6iLsfp1qckHDRrtzQHaHZ?w=208\u0026h=207\u0026c=7\u0026r=0\u0026o=5\u0026dpr=1.2\u0026pid=1.7"},"author": {
@@ -244,13 +244,24 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Matlab复习</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%9C%9F%E6%9C%AB/" class="post-category" title="Category - 期末"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 期末</a></span></div><div class="post-meta-line"><span title="published on 2024-06-29 14:45:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-29">2024-06-29</time></span>&nbsp;<span title="155 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 200 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
+      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%9C%9F%E6%9C%AB/" class="post-category" title="Category - 期末"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 期末</a></span></div><div class="post-meta-line"><span title="published on 2024-06-29 14:45:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-29">2024-06-29</time></span>&nbsp;<span title="184 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 200 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>Contents</span>
           <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#51二维图形">5.1二维图形</a>
+      <ul>
+        <li><a href="#基本函数">基本函数</a></li>
+        <li><a href="#绘制图形辅助操作">绘制图形辅助操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#52其他形式的二维图形">5.2其他形式的二维图形</a></li>
+    <li><a href="#53三维图形">5.3三维图形</a></li>
+  </ul>
+
   <ul>
     <li><a href="#61数据统计分析">6.1数据统计分析：</a>
       <ul>
@@ -293,8 +304,17 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <li><a href="#81线性方程组求解">8.1线性方程组求解</a>
       <ul>
         <li><a href="#直接求解法">直接求解法</a></li>
+        <li><a href="#迭代求法">迭代求法</a></li>
       </ul>
     </li>
+    <li><a href="#82非线性方程组数值求解">8.2非线性方程组数值求解</a>
+      <ul>
+        <li><a href="#单变量非线性方程求解">单变量非线性方程求解</a></li>
+        <li><a href="#非线性方程组求解">非线性方程组求解</a></li>
+      </ul>
+    </li>
+    <li><a href="#83最优化问题求解">8.3最优化问题求解</a></li>
+    <li><a href="#84常微分初值问题的数值求解">8.4常微分初值问题的数值求解</a></li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><h1 id="第一章matlab系统环境" class="heading-element"><span>第一章：MATLAB系统环境</span>
@@ -331,7 +351,29 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
   <a href="#%e7%ac%ac%e4%ba%94%e7%ab%a0matlab%e7%bb%98%e5%9b%be" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><h1 id="第六章matlab数据分析和多项式计算" class="heading-element"><span>第六章：MATLAB数据分析和多项式计算</span>
+</h1><h2 id="51二维图形" class="heading-element"><span>5.1二维图形</span>
+  <a href="#51%e4%ba%8c%e7%bb%b4%e5%9b%be%e5%bd%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="基本函数" class="heading-element"><span>基本函数</span>
+  <a href="#%e5%9f%ba%e6%9c%ac%e5%87%bd%e6%95%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>plot(x,y)函数的基本用法：分别以x,y为横纵坐标画图（x,y向量长度相同）</p>
+<p>当x是向量y是矩阵：x必须与y的行数或者列数相同，若等于行数，则以列数作为横纵坐标，反之亦然。</p>
+<h3 id="绘制图形辅助操作" class="heading-element"><span>绘制图形辅助操作</span>
+  <a href="#%e7%bb%98%e5%88%b6%e5%9b%be%e5%bd%a2%e8%be%85%e5%8a%a9%e6%93%8d%e4%bd%9c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><h2 id="52其他形式的二维图形" class="heading-element"><span>5.2其他形式的二维图形</span>
+  <a href="#52%e5%85%b6%e4%bb%96%e5%bd%a2%e5%bc%8f%e7%9a%84%e4%ba%8c%e7%bb%b4%e5%9b%be%e5%bd%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="53三维图形" class="heading-element"><span>5.3三维图形</span>
+  <a href="#53%e4%b8%89%e7%bb%b4%e5%9b%be%e5%bd%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h1 id="第六章matlab数据分析和多项式计算" class="heading-element"><span>第六章：MATLAB数据分析和多项式计算</span>
   <a href="#%e7%ac%ac%e5%85%ad%e7%ab%a0matlab%e6%95%b0%e6%8d%ae%e5%88%86%e6%9e%90%e5%92%8c%e5%a4%9a%e9%a1%b9%e5%bc%8f%e8%ae%a1%e7%ae%97" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -512,11 +554,55 @@ median不如均值易于计算和理解，尤其是对于较大的数据集。</
   <a href="#%e7%9b%b4%e6%8e%a5%e6%b1%82%e8%a7%a3%e6%b3%95" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>利用左除运算符求解</p>
+</h3><p><strong>利用左除运算符求解</strong></p>
 <p>即Ax=b，x=A\b</p>
-<p><img loading="lazy" src="http://cdn.liagu-one.top/img/image-20240630020948013.png" alt="image-20240630020948013" srcset="http://cdn.liagu-one.top/img/image-20240630020948013.png?size=small, http://cdn.liagu-one.top/img/image-20240630020948013.png?size=medium 1.5x, http://cdn.liagu-one.top/img/image-20240630020948013.png?size=large 2x" data-title="image-20240630020948013" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
-<p><img loading="lazy" src="http://cdn.liagu-one.top/image-20240630021621318.png" alt="image-20240630021621318" srcset="http://cdn.liagu-one.top/image-20240630021621318.png?size=small, http://cdn.liagu-one.top/image-20240630021621318.png?size=medium 1.5x, http://cdn.liagu-one.top/image-20240630021621318.png?size=large 2x" data-title="image-20240630021621318" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
-<h1 id="第九章matlab符号计算选填" class="heading-element"><span>第九章：MATLAB符号计算（选填）</span>
+<p><img loading="lazy" src="http://picgo.liagu-one.top/img/image-20240630034302035.png" alt="image-20240630034302035" srcset="http://picgo.liagu-one.top/img/image-20240630034302035.png?size=small, http://picgo.liagu-one.top/img/image-20240630034302035.png?size=medium 1.5x, http://picgo.liagu-one.top/img/image-20240630034302035.png?size=large 2x" data-title="image-20240630034302035" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><strong>利用矩阵分解</strong></p>
+<p>LU分解 ：矩阵的LU分解就是将一个n阶矩阵表示为一个下三角矩阵和一个上三角矩阵的 乘积。</p>
+<p><img loading="lazy" src="http://picgo.liagu-one.top/img/image-20240630034723266.png" alt="image-20240630034723266" srcset="http://picgo.liagu-one.top/img/image-20240630034723266.png?size=small, http://picgo.liagu-one.top/img/image-20240630034723266.png?size=medium 1.5x, http://picgo.liagu-one.top/img/image-20240630034723266.png?size=large 2x" data-title="image-20240630034723266" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><img loading="lazy" src="http://picgo.liagu-one.top/img/image-20240630034950552.png" alt="image-20240630034950552" srcset="http://picgo.liagu-one.top/img/image-20240630034950552.png?size=small, http://picgo.liagu-one.top/img/image-20240630034950552.png?size=medium 1.5x, http://picgo.liagu-one.top/img/image-20240630034950552.png?size=large 2x" data-title="image-20240630034950552" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>QR分解</p>
+<p>Cholesky分解</p>
+<h3 id="迭代求法" class="heading-element"><span>迭代求法</span>
+  <a href="#%e8%bf%ad%e4%bb%a3%e6%b1%82%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>迭代法是一种不断用变量的原值推出它的新值的过程，是用计算机解决问 题的一种基本方法。</p>
+<h4 id="雅可比jacobi迭代法" class="heading-element"><span>雅可比（Jacobi）迭代法</span>
+  <a href="#%e9%9b%85%e5%8f%af%e6%af%94jacobi%e8%bf%ad%e4%bb%a3%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h4 id="高斯-赛德尔gauss-serdel迭代法" class="heading-element"><span>高斯-赛德尔（Gauss-Serdel）迭代法</span>
+  <a href="#%e9%ab%98%e6%96%af-%e8%b5%9b%e5%be%b7%e5%b0%94gauss-serdel%e8%bf%ad%e4%bb%a3%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h4><h2 id="82非线性方程组数值求解" class="heading-element"><span>8.2非线性方程组数值求解</span>
+  <a href="#82%e9%9d%9e%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84%e6%95%b0%e5%80%bc%e6%b1%82%e8%a7%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="单变量非线性方程求解" class="heading-element"><span>单变量非线性方程求解</span>
+  <a href="#%e5%8d%95%e5%8f%98%e9%87%8f%e9%9d%9e%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e6%b1%82%e8%a7%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>fzero函数求根</p>
+<h3 id="非线性方程组求解" class="heading-element"><span>非线性方程组求解</span>
+  <a href="#%e9%9d%9e%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84%e6%b1%82%e8%a7%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>fsolve函数求解非线性方程组的根</p>
+<p>X=fsolve(filename,X0,option)</p>
+<h2 id="83最优化问题求解" class="heading-element"><span>8.3最优化问题求解</span>
+  <a href="#83%e6%9c%80%e4%bc%98%e5%8c%96%e9%97%ae%e9%a2%98%e6%b1%82%e8%a7%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>无约束最优化问题求解</p>
+<p>有约束最优化问题求解</p>
+<p>线性规划问题求解</p>
+<h2 id="84常微分初值问题的数值求解" class="heading-element"><span>8.4常微分初值问题的数值求解</span>
+  <a href="#84%e5%b8%b8%e5%be%ae%e5%88%86%e5%88%9d%e5%80%bc%e9%97%ae%e9%a2%98%e7%9a%84%e6%95%b0%e5%80%bc%e6%b1%82%e8%a7%a3" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h1 id="第九章matlab符号计算选填" class="heading-element"><span>第九章：MATLAB符号计算（选填）</span>
   <a href="#%e7%ac%ac%e4%b9%9d%e7%ab%a0matlab%e7%ac%a6%e5%8f%b7%e8%ae%a1%e7%ae%97%e9%80%89%e5%a1%ab" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
