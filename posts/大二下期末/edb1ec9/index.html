@@ -11,7 +11,7 @@
   <meta itemprop="name" content="Matlab复习">
   <meta itemprop="datePublished" content="2024-06-29T14:45:56+08:00">
   <meta itemprop="dateModified" content="2024-06-29T14:45:56+08:00">
-  <meta itemprop="wordCount" content="28">
+  <meta itemprop="wordCount" content="155">
   <meta itemprop="keywords" content="期末"><meta property="og:url" content="http://localhost:1313/posts/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB/edb1ec9/">
   <meta property="og:site_name" content="Liagu">
   <meta property="og:title" content="Matlab复习">
@@ -37,7 +37,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB\/edb1ec9\/"
-    },"genre": "posts","keywords": "期末","wordcount":  28 ,
+    },"genre": "posts","keywords": "期末","wordcount":  155 ,
     "url": "http:\/\/localhost:1313\/posts\/%E5%A4%A7%E4%BA%8C%E4%B8%8B%E6%9C%9F%E6%9C%AB\/edb1ec9\/","datePublished": "2024-06-29T14:45:56+08:00","dateModified": "2024-06-29T14:45:56+08:00","publisher": {
       "@type": "Organization",
       "name": "","logo": "https:\/\/th.bing.com\/th\/id\/OIP.g4xSH6iLsfp1qckHDRrtzQHaHZ?w=208\u0026h=207\u0026c=7\u0026r=0\u0026o=5\u0026dpr=1.2\u0026pid=1.7"},"author": {
@@ -244,8 +244,60 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Matlab复习</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%9C%9F%E6%9C%AB/" class="post-category" title="Category - 期末"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 期末</a></span></div><div class="post-meta-line"><span title="published on 2024-06-29 14:45:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-29">2024-06-29</time></span>&nbsp;<span title="28 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 100 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
-    </div><div class="content" id="content"><h1 id="第一章matlab系统环境" class="heading-element"><span>第一章：MATLAB系统环境</span>
+      Liagu</span></span><span class="post-included-in">&nbsp;included in <a href="/categories/%E6%9C%9F%E6%9C%AB/" class="post-category" title="Category - 期末"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 期末</a></span></div><div class="post-meta-line"><span title="published on 2024-06-29 14:45:56"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-06-29">2024-06-29</time></span>&nbsp;<span title="155 words"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>About 200 words</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>One minute</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#61数据统计分析">6.1数据统计分析：</a>
+      <ul>
+        <li><a href="#最大最小值">最大最小值</a></li>
+        <li><a href="#求和求积">求和求积</a></li>
+        <li><a href="#平均值中值">平均值/中值</a></li>
+        <li><a href="#累加累乘">累加累乘</a></li>
+        <li><a href="#标准差和相关系数">标准差和相关系数</a></li>
+        <li><a href="#排序">排序</a></li>
+      </ul>
+    </li>
+    <li><a href="#62多项式计算">6.2多项式计算</a>
+      <ul>
+        <li><a href="#多项式四则运算">多项式四则运算</a></li>
+        <li><a href="#多项式导函数">多项式导函数</a></li>
+        <li><a href="#多项式求值">多项式求值</a></li>
+        <li><a href="#多项式求根">多项式求根</a></li>
+      </ul>
+    </li>
+    <li><a href="#63数据插值">6.3数据插值</a>
+      <ul>
+        <li><a href="#一维数据插值">一维数据插值</a></li>
+        <li><a href="#二维数据插值">二维数据插值</a></li>
+      </ul>
+    </li>
+    <li><a href="#64曲线拟合">6.4曲线拟合</a>
+      <ul>
+        <li><a href="#实现">实现</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据插值和曲线拟合不一样的地方">数据插值和曲线拟合不一样的地方</a>
+      <ul>
+        <li><a href="#1相同点">1、相同点:</a></li>
+        <li><a href="#2不同点">2、不同点:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#81线性方程组求解">8.1线性方程组求解</a>
+      <ul>
+        <li><a href="#直接求解法">直接求解法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h1 id="第一章matlab系统环境" class="heading-element"><span>第一章：MATLAB系统环境</span>
   <a href="#%e7%ac%ac%e4%b8%80%e7%ab%a0matlab%e7%b3%bb%e7%bb%9f%e7%8e%af%e5%a2%83" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
@@ -284,29 +336,204 @@ src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=1&d=3&bd=0&k=&f=&lt
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h1><p><strong>拟合插值各看一个方法，看ppt（背背背案例），比较两者总结不一样的点（应用场景什么的）背下来，数据统计里面怎么求max，min，sub，average，求积，(这些命令怎么使用，传几个参数，穿哪些，有几个，先后顺序)标准相关系数</strong></p>
-<ol>
-<li>
-<p>求向量、矩阵的最大元素和最小元素：
-向量max()：求向量或矩阵的最大/小元素。
+<h2 id="61数据统计分析" class="heading-element"><span>6.1数据统计分析：</span>
+  <a href="#61%e6%95%b0%e6%8d%ae%e7%bb%9f%e8%ae%a1%e5%88%86%e6%9e%90" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="最大最小值" class="heading-element"><span>最大最小值</span>
+  <a href="#%e6%9c%80%e5%a4%a7%e6%9c%80%e5%b0%8f%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>1、**向量max()：**求向量或矩阵的最大/小元素。
 y=max(X):若x有复数则取模最大</p>
 <p>[y,k]=max(X):y存入最大值，k存入序号</p>
-<p>矩阵max</p>
-</li>
+<p>2、<strong>矩阵max():</strong></p>
+<p>max(A,[],dim):dim取1或者2，1是每一列的最大值，2是每一行的最大值（[]这个参数用来占位，表示忽略此参数。）</p>
+<p>3、两个向量或者矩阵对应元素的比较</p>
+<p>U=MAX(A,B),U与二者同型，结果是对应元素取最大的（A，B也同型）</p>
+<p>U=MAX(A,n)，结果是A对应元素与n最大值</p>
+<p><em>用什么方法只调用一次max 函数就能求得整个矩阵的最大值？</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-matlab" data-lang="matlab"><span style="display:flex;"><span>A = [<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">5</span>; <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">8</span>; <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">9</span>];
+</span></span><span style="display:flex;"><span>max_val = max(A(:));</span></span></code></pre></div><h3 id="求和求积" class="heading-element"><span>求和求积</span>
+  <a href="#%e6%b1%82%e5%92%8c%e6%b1%82%e7%a7%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>sum(X)：x为向量，返回各元素之和</p>
+<p>sum(A)：A是矩阵，返回行向量，是各列的和</p>
+<p>sum(A,dim)：1为列元素和，2为行元素和</p>
+<p>求积用prod函数（乘积：product）</p>
+<h3 id="平均值中值" class="heading-element"><span>平均值/中值</span>
+  <a href="#%e5%b9%b3%e5%9d%87%e5%80%bc%e4%b8%ad%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>mean(X)：x为向量，计算平均值</p>
+<p>mean(A)：A是矩阵，返回行向量，是各列的平均值</p>
+<p>mean(A,dim)：同上</p>
+<p>median()：计算中值，同mean</p>
+<p>分析哪一个更合理：mean对异常值（outliers）非常敏感。即使有少量极端值，也会显著影响均值。
+median不如均值易于计算和理解，尤其是对于较大的数据集。</p>
+<h3 id="累加累乘" class="heading-element"><span>累加累乘</span>
+  <a href="#%e7%b4%af%e5%8a%a0%e7%b4%af%e4%b9%98" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>consum(X)：x为向量，计算平均值</p>
+<p>consum(A)：A是矩阵，返回行向量，是各列的累加和向量</p>
+<p>consum(A,dim)：同上，1是列，2是行</p>
+<p>conprod()：同上</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-matlab" data-lang="matlab"><span style="display:flex;"><span>求<span style="color:#ae81ff">1</span>！<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>！<span style="color:#f92672">+</span><span style="color:#75715e">...+6!</span>
+</span></span><span style="display:flex;"><span>x=conprod(<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">6</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>x=<span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">24</span> <span style="color:#ae81ff">120</span> <span style="color:#ae81ff">720</span>
+</span></span><span style="display:flex;"><span>sum(x)</span></span></code></pre></div><h3 id="标准差和相关系数" class="heading-element"><span>标准差和相关系数</span>
+  <a href="#%e6%a0%87%e5%87%86%e5%b7%ae%e5%92%8c%e7%9b%b8%e5%85%b3%e7%b3%bb%e6%95%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><strong>标准差：</strong></p>
+<p>std(X)：返回向量标准差</p>
+<p>std(A)：返回矩阵每列标准差</p>
+<p>调用方式：std(A，flag，dim)，flag取0调用公式一求标准差，1则是公式2。dim还是1求列，2求行。默认flag=0，dim=1</p>
+<p><strong>相关系数：</strong></p>
+<p>corrcoef(X,Y)：求向量相关系数矩阵,求序列X,和Y的相关系数，结果是2x2的矩阵，对角线上是自相关系数矩阵，非对角线是X和Y，和Y和X的相关系数，是相等的。与corrcoef([X,Y])等价</p>
+<p>corrcoef(X)：求矩阵相关系数，第i行第j列是矩阵X第i列和第j列的相关系数</p>
+<p><em>randn产生的随机数是独立的</em></p>
+<p>cov()：产生协方差矩阵与上面类似</p>
+<h3 id="排序" class="heading-element"><span>排序</span>
+  <a href="#%e6%8e%92%e5%ba%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>sort(A,dim,mode)：dim=1按列排，为2按行排序，mode为ascend升序（默认不写），逆序为descend,要加单引号。</p>
+<h2 id="62多项式计算" class="heading-element"><span>6.2多项式计算</span>
+  <a href="#62%e5%a4%9a%e9%a1%b9%e5%bc%8f%e8%ae%a1%e7%ae%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>多项式系数的量包含0次数项，向量从高到低</p>
+<h3 id="多项式四则运算" class="heading-element"><span>多项式四则运算</span>
+  <a href="#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e5%9b%9b%e5%88%99%e8%bf%90%e7%ae%97" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>加减：没有函数，对应相加减</p>
+<p>乘：conv(A,B),A,B为系数向量</p>
+<p>除法：[q,r]deconv(A,B),q返回A除B的商式，r返回余式</p>
+<p>二者互为逆函数，A=B*q+r</p>
+<h3 id="多项式导函数" class="heading-element"><span>多项式导函数</span>
+  <a href="#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e5%af%bc%e5%87%bd%e6%95%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>polyder(P)：P的导函数</p>
+<p>polyder(P,Q)：P*Q的导函数</p>
+<p>[P,Q]polyder(P,Q)：P/Q的导函数，导数分子存p,分母存q</p>
+<h3 id="多项式求值" class="heading-element"><span>多项式求值</span>
+  <a href="#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e6%b1%82%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>代数多项式求值：</p>
+<p>polyval(P,x)，x为自变量，P为系数向量</p>
+<p>矩阵多项式求值：</p>
+<p>polyvalm(P,A)，调用相同含义不同，A为方阵</p>
+<h3 id="多项式求根" class="heading-element"><span>多项式求根</span>
+  <a href="#%e5%a4%9a%e9%a1%b9%e5%bc%8f%e6%b1%82%e6%a0%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>x=roots(P)</p>
+<p>若已知多项式全部根，可以重新建立起多项式ploy(x)</p>
+<h2 id="63数据插值" class="heading-element"><span>6.3数据插值</span>
+  <a href="#63%e6%95%b0%e6%8d%ae%e6%8f%92%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>从离散的数据，得到离散以外的数值</p>
+<h3 id="一维数据插值" class="heading-element"><span>一维数据插值</span>
+  <a href="#%e4%b8%80%e7%bb%b4%e6%95%b0%e6%8d%ae%e6%8f%92%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>插值函数是一个单变量函数，采用一维插值，插值函数Y1=interp1(X,Y,X1,method)，是根据等长的已知向量X,Y，计算函数在X1处的值，超出X的插值点会出现NAN错误</p>
+<p>插值方法：</p>
+<ol>
+<li>linear：线性插值，method不写为默认方法</li>
+<li>nearest：最近点插值</li>
+<li>pchip：分段3次埃米尔特插值</li>
+<li>spline：3次样条插值，专门的函数spline(X,Y,X1)与interp1(X,Y,X1,spline)作用相同</li>
 </ol>
+<h3 id="二维数据插值" class="heading-element"><span>二维数据插值</span>
+  <a href="#%e4%ba%8c%e7%bb%b4%e6%95%b0%e6%8d%ae%e6%8f%92%e5%80%bc" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>自变量是两个变化时，插值函数Z1=interp1(X,Y,Z,X1,Y1,method)，采用二维插值，X,Y,Z可以是矩阵。二维插值不支持pchip方法，其他都一样。同样超出X，Y的插值点会出现NAN错误</p>
+<p>interp1(X,Y,Z,X1,Y1,method)，在X1,Y1处插值</p>
+<p>interp1(X,Y,Z,[X1,X2],Y1,method)，在（X1,Y1）（X2,Y1）插值</p>
+<p>interp1(X,Y,Z,[X1,X2],[Y1,Y2],method)，在（X1,Y1）（X2,Y2）插值</p>
+<p>interp1(X,Y,Z,[X1,X2]&rsquo;,[Y1,Y2],method)，在（X1,Y1）（X1,Y2）（X2,Y1）（X2,Y2）插值</p>
+<h2 id="64曲线拟合" class="heading-element"><span>6.4曲线拟合</span>
+  <a href="#64%e6%9b%b2%e7%ba%bf%e6%8b%9f%e5%90%88" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>与插值类似，但又不同，不完全经过采样点，但希望拟合的函数g(x)靠近采样点。曲线拟合使用最小二乘逼近原理。</p>
+<h3 id="实现" class="heading-element"><span>实现</span>
+  <a href="#%e5%ae%9e%e7%8e%b0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>进行拟合时，实际是求一个系数向量，系数向量是多项式系数，matlab用polyfit函数求最小二乘拟合多项式的系数，再用ployval（）函数按照所得多项式计算给出点上的函数逼近值</p>
+<p>P=polyfit(X,Y,m)</p>
+<p>[P,S]=polyfit(X,Y,m)</p>
+<p>[P,S,mu]=polyfit(X,Y,m)</p>
+<p>采样点X和采样点函数值Y生成m次多项式，P是长度m+1向量，为多项式系数，mu(1)是mean()X,mu(2)是std(X)</p>
+<h2 id="数据插值和曲线拟合不一样的地方" class="heading-element"><span>数据插值和曲线拟合不一样的地方</span>
+  <a href="#%e6%95%b0%e6%8d%ae%e6%8f%92%e5%80%bc%e5%92%8c%e6%9b%b2%e7%ba%bf%e6%8b%9f%e5%90%88%e4%b8%8d%e4%b8%80%e6%a0%b7%e7%9a%84%e5%9c%b0%e6%96%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="1相同点" class="heading-element"><span>1、相同点:</span>
+  <a href="#1%e7%9b%b8%e5%90%8c%e7%82%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>①都属于函数逼近方法
+②都能进行数据估算</p>
+<h3 id="2不同点" class="heading-element"><span>2、不同点:</span>
+  <a href="#2%e4%b8%8d%e5%90%8c%e7%82%b9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>①实现方法不同： 数据插值要求逼近函数经过样本点，而曲线拟合不要求逼近函数经过样本点，只要求总体误差最小。
+②结果形式不同： 数据插值往往分段进行逼近，没有统一的逼近函数。曲线拟合用一个函数进行整体逼近，有确定的函数表达式。
+③侧重点不同： 数据插值一般用于样本区间内的插值计算，而曲线拟合不仅可以估算区间内其他点的函数值，还可以预测时序数据的发展趋势，以及从统计数据中总结一般性经验
+④应用场合不同： 如果样本数据为精确数据，适合采用数据插值方法；如果样本数据为统计数据或存在误差，则适合用曲线拟合的方法。</p>
 <h1 id="第七章matlab数值微分和积分" class="heading-element"><span>第七章：MATLAB数值微分和积分</span>
   <a href="#%e7%ac%ac%e4%b8%83%e7%ab%a0matlab%e6%95%b0%e5%80%bc%e5%be%ae%e5%88%86%e5%92%8c%e7%a7%af%e5%88%86" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><p>差分差商最简单的例子要会，没有大腿，有选择填空，看课本知识点</p>
+</h1><p>差分差商最简单的例子要会，没有大题，有选择填空，看课本知识点</p>
 <h1 id="第八章matlab方程数值求解" class="heading-element"><span>第八章：MATLAB方程数值求解</span>
   <a href="#%e7%ac%ac%e5%85%ab%e7%ab%a0matlab%e6%96%b9%e7%a8%8b%e6%95%b0%e5%80%bc%e6%b1%82%e8%a7%a3" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1><h1 id="第九章matlab符号计算" class="heading-element"><span>第九章：MATLAB符号计算</span>
-  <a href="#%e7%ac%ac%e4%b9%9d%e7%ab%a0matlab%e7%ac%a6%e5%8f%b7%e8%ae%a1%e7%ae%97" class="heading-mark">
+</h1><p>三种方式（都得背）：直接求解（求幂，反除），迭代法（高斯迭代背下来），jacabi迭代背下来，直接迭代（lu分解，qr分解，背一种），最优问题求解（看ppt，相对简单，改一下参数）</p>
+<h2 id="81线性方程组求解" class="heading-element"><span>8.1线性方程组求解</span>
+  <a href="#81%e7%ba%bf%e6%80%a7%e6%96%b9%e7%a8%8b%e7%bb%84%e6%b1%82%e8%a7%a3" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h1></div><div class="post-footer" id="post-footer">
+</h2><h3 id="直接求解法" class="heading-element"><span>直接求解法</span>
+  <a href="#%e7%9b%b4%e6%8e%a5%e6%b1%82%e8%a7%a3%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>利用左除运算符求解</p>
+<p>即Ax=b，x=A\b</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/L1a9uk/oneimages/master/2024/06/upgit_20240630_1719681518.png" alt="image-20240630011838090" srcset="https://raw.githubusercontent.com/L1a9uk/oneimages/master/2024/06/upgit_20240630_1719681518.png?size=small, https://raw.githubusercontent.com/L1a9uk/oneimages/master/2024/06/upgit_20240630_1719681518.png?size=medium 1.5x, https://raw.githubusercontent.com/L1a9uk/oneimages/master/2024/06/upgit_20240630_1719681518.png?size=large 2x" data-title="image-20240630011838090" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<h1 id="第九章matlab符号计算选填" class="heading-element"><span>第九章：MATLAB符号计算（选填）</span>
+  <a href="#%e7%ac%ac%e4%b9%9d%e7%ab%a0matlab%e7%ac%a6%e5%8f%b7%e8%ae%a1%e7%ae%97%e9%80%89%e5%a1%ab" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>不考大题，就是基础的知识点</p>
+<h1 id="总结" class="heading-element"><span>总结：</span>
+  <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>大题</p>
+<ol>
+<li>数据，矩阵表示方法，怎么输入输出出来（结合if，else，for循环看一个例子，怎么写），结合字符串去做</li>
+<li>画图绘图处理（二维的，同一个坐标系同一个布局，画什么样的图形，线条是什么样的）</li>
+<li>数据分析，统计分析，每一个方法（怎么传递参数，得出结果处理结果，打印结果）</li>
+<li>多项式考选择填空的，插值拟合分别会考，两者之间的应用场景有什么不一样的地方，做的是不是同一个事情</li>
+<li>第七章微分积分，差分差商，通过数值的方法进行求导，通过采样得到函数，然后进行求导，傅里叶变化不考</li>
+<li>第八章线性方程三种方法，直接方法，迭代两个都背下来。无约束的最优化手写敲一下！2和4节选择填空</li>
+<li>第九章选择填空</li>
+</ol></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
@@ -337,7 +564,8 @@ y=max(X):若x有复数则取模最大</p>
     <div class="reward-ways" data-mode="static"></div>
   </div></article>
 
-  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
     <div class="footer-container"><style>
   .footerImg {
       height: 20px;  
