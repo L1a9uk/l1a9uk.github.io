@@ -1,22 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Dada代码审计 - Category - Liagu</title>
-    <link>http://localhost:50367/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
+    <link>http://localhost:1313/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/</link>
     <description>Dada代码审计 - Category | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:50367/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/categories/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" rel="self" type="application/rss+xml" /><item>
   <title>Day2 我要rce</title>
-  <link>http://localhost:50367/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</link>
+  <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</link>
   <pubDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:50367/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</guid>
+  <guid>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/63e6eec/</guid>
   <description><![CDATA[]]></description>
 </item>
 <item>
   <title>Day1 Sql注⼊与数据库利⽤</title>
-  <link>http://localhost:50367/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</link>
+  <link>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</link>
   <pubDate>Tue, 04 Jun 2024 21:42:20 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:50367/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</guid>
+  <guid>http://localhost:1313/posts/dada%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/4294c34/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>
