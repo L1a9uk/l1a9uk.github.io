@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Blog - Tag - Liagu</title>
-    <link>http://localhost:1313/tags/blog/</link>
+    <link>http://localhost:50367/tags/blog/</link>
     <description>Blog - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 18:43:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 16 May 2024 18:43:27 &#43;0800</lastBuildDate><atom:link href="http://localhost:50367/tags/blog/" rel="self" type="application/rss+xml" /><item>
   <title>Hugo整理</title>
-  <link>http://localhost:1313/posts/ca8165e/</link>
+  <link>http://localhost:50367/posts/ca8165e/</link>
   <pubDate>Thu, 16 May 2024 18:43:27 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://localhost:1313/posts/ca8165e/</guid>
+  <guid>http://localhost:50367/posts/ca8165e/</guid>
   <description><![CDATA[]]></description>
 </item>
 </channel>

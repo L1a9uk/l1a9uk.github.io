@@ -1,7 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>Tags - Tag - Liagu</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://localhost:50367/tags/</link>
     <description>Tags - Tag | Liagu</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /></channel>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2024 21:12:31 &#43;0800</lastBuildDate><atom:link href="http://localhost:50367/tags/" rel="self" type="application/rss+xml" /><item>
+  <title>期末</title>
+  <link>http://localhost:50367/tags/%E6%9C%9F%E6%9C%AB/</link>
+  <pubDate>Mon, 01 Jul 2024 21:12:31 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/%E6%9C%9F%E6%9C%AB/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>代审</title>
+  <link>http://localhost:50367/tags/%E4%BB%A3%E5%AE%A1/</link>
+  <pubDate>Tue, 04 Jun 2024 22:00:29 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/%E4%BB%A3%E5%AE%A1/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>快捷小技巧</title>
+  <link>http://localhost:50367/tags/%E5%BF%AB%E6%8D%B7%E5%B0%8F%E6%8A%80%E5%B7%A7/</link>
+  <pubDate>Sun, 26 May 2024 13:13:11 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/%E5%BF%AB%E6%8D%B7%E5%B0%8F%E6%8A%80%E5%B7%A7/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Tools-Usage</title>
+  <link>http://localhost:50367/tags/tools-usage/</link>
+  <pubDate>Thu, 23 May 2024 21:00:46 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/tools-usage/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Draft</title>
+  <link>http://localhost:50367/tags/draft/</link>
+  <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/draft/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Src</title>
+  <link>http://localhost:50367/tags/src/</link>
+  <pubDate>Thu, 16 May 2024 19:34:59 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/src/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Blog</title>
+  <link>http://localhost:50367/tags/blog/</link>
+  <pubDate>Thu, 16 May 2024 18:43:27 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/blog/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Hugo</title>
+  <link>http://localhost:50367/tags/hugo/</link>
+  <pubDate>Thu, 16 May 2024 18:43:27 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/hugo/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>CTF</title>
+  <link>http://localhost:50367/tags/ctf/</link>
+  <pubDate>Wed, 15 May 2024 21:52:02 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/ctf/</guid>
+  <description><![CDATA[]]></description>
+</item>
+<item>
+  <title>Huxblog</title>
+  <link>http://localhost:50367/tags/huxblog/</link>
+  <pubDate>Sat, 11 May 2024 21:22:16 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://localhost:50367/tags/huxblog/</guid>
+  <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
